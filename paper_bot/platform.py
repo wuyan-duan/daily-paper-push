@@ -419,7 +419,9 @@ def wechat_digest(
     lines = [
         f"# 今日论文速递 · {report_date.isoformat()}",
         "",
-        f"入选 **{len(selected)}** 篇，候选池 **{candidate_count}** 篇。微信里先看 Top {len(shown)}，完整列表点下面。",
+        f"入选 **{len(selected)}** 篇，候选池 **{candidate_count}** 篇。微信里先看 Top {len(shown)} 的结构化速读卡，完整列表点下面。",
+        "",
+        "说明：这是一版基于 papers.cool/arXiv 元数据和摘要的速读筛选；公式、图表和完整实验细节需要打开 PDF 精读。",
         "",
     ]
     if public_url:
@@ -433,12 +435,35 @@ def wechat_digest(
             [
                 f"## {index}. {paper.title}",
                 "",
-                f"**分数**：{item.score}  ",
-                f"**标签**：{format_digest_tags(item)}",
+                "**论文基本信息**",
                 "",
-                f"**看点**：{wechat_takeaway(item)}",
+                f"- **标题**：{paper.title}",
+                f"- **作者**：{format_authors(paper.authors)}",
+                f"- **发表年份/来源**：{paper.updated.strftime('%Y')} · arXiv · {', '.join(sorted(paper.categories))}",
+                f"- **摘要**：{one_line_takeaway(paper.summary, width=170)}",
                 "",
-                f"[arXiv]({paper.arxiv_url}) · [PDF]({paper.pdf_url}) · [papers.cool]({paper.papers_cool_url})",
+                "**整体概括**",
+                "",
+                f"- **研究背景与动机 (Why)**：{wechat_why(item)}",
+                f"- **核心贡献/主要发现 (What)**：{wechat_what(item)}",
+                "",
+                "**方法 (Methods - 核心技术与实现细节)**",
+                "",
+                f"- **方法原理**：{wechat_method_hint(item)}",
+                f"- **摘要中的方法线索**：{abstract_method_line(paper.summary)}",
+                f"- **方法步骤与流程**：先定位论文里的 method/algorithm/training setup 部分，再看输入数据、奖励/目标函数、rollout 或 inference 流程是否闭环。",
+                "",
+                "**实验结果 (Results - 数据解读与结果分析)**",
+                "",
+                f"- **结果线索**：{abstract_result_line(paper.summary)}",
+                f"- **阅读重点**：{wechat_result_hint(item)}",
+                "",
+                "**精读提示**",
+                "",
+                f"- **优先级**：{item.score} / {format_digest_tags(item)}",
+                "- **公式/符号**：如果文中出现训练目标、奖励函数或优化公式，记录时统一使用 `$...$` 或 `$$...$$`。",
+                "- **图表**：首次精读每张图时，补一句“这张图解释了什么”，特别关注方法框图、训练流程图、主结果表和消融表。",
+                f"- **链接**：[arXiv]({paper.arxiv_url}) · [PDF]({paper.pdf_url}) · [papers.cool]({paper.papers_cool_url})",
                 "",
                 "---",
                 "",
@@ -468,6 +493,14 @@ def format_digest_tags(item: Any) -> str:
     return " / ".join(tags[:4])
 
 
+def format_authors(authors: list[str], limit: int = 4) -> str:
+    if not authors:
+        return "未知"
+    if len(authors) <= limit:
+        return ", ".join(authors)
+    return ", ".join(authors[:limit]) + f", et al. ({len(authors)} authors)"
+
+
 def one_line_takeaway(summary: str, width: int = 180) -> str:
     cleaned = " ".join((summary or "").split())
     if not cleaned:
@@ -483,23 +516,133 @@ def one_line_takeaway(summary: str, width: int = 180) -> str:
     return first[: width - 3].rstrip() + "..."
 
 
-def wechat_takeaway(item: Any) -> str:
+def split_abstract_sentences(summary: str) -> list[str]:
+    cleaned = " ".join((summary or "").split())
+    if not cleaned:
+        return []
+    sentences: list[str] = []
+    start = 0
+    for index, char in enumerate(cleaned):
+        if char not in ".!?":
+            continue
+        if index + 1 < len(cleaned) and cleaned[index + 1] not in " ":
+            continue
+        sentence = cleaned[start : index + 1].strip()
+        if sentence:
+            sentences.append(sentence)
+        start = index + 1
+    tail = cleaned[start:].strip()
+    if tail:
+        sentences.append(tail)
+    return sentences
+
+
+def abstract_line(summary: str, keywords: list[str], fallback_index: int, width: int = 210) -> str:
+    sentences = split_abstract_sentences(summary)
+    if not sentences:
+        return "摘要没有提供足够线索，建议打开 PDF 查看对应章节。"
+    lowered_keywords = [keyword.lower() for keyword in keywords]
+    for sentence in sentences:
+        lowered = sentence.lower()
+        if any(keyword in lowered for keyword in lowered_keywords):
+            return one_line_takeaway(sentence, width=width)
+    if fallback_index < len(sentences):
+        return one_line_takeaway(sentences[fallback_index], width=width)
+    return one_line_takeaway(sentences[-1], width=width)
+
+
+def abstract_method_line(summary: str) -> str:
+    return abstract_line(
+        summary,
+        [
+            "we propose",
+            "we introduce",
+            "we present",
+            "method",
+            "framework",
+            "algorithm",
+            "training",
+            "reward",
+            "policy",
+            "agent",
+            "optimization",
+            "dataset",
+        ],
+        fallback_index=1,
+    )
+
+
+def abstract_result_line(summary: str) -> str:
+    return abstract_line(
+        summary,
+        [
+            "experiments",
+            "results",
+            "outperform",
+            "achieve",
+            "improve",
+            "evaluation",
+            "benchmark",
+            "demonstrate",
+            "show",
+            "significant",
+        ],
+        fallback_index=2,
+    )
+
+
+def wechat_why(item: Any) -> str:
     groups = set(item.matched.keys())
-    terms = []
-    for values in item.matched.values():
-        terms.extend(values)
-    title = item.paper.title
     if "agentic_rl" in groups and "rl_post_training" in groups:
-        return "强相关：同时命中 Agent/工具/多智能体 与 RL/post-training 信号，适合优先判断是否进入精读队列。"
+        return "强相关：同时命中 Agent/工具/多智能体 与 RL/post-training 信号，贴近 Agentic RL 主线。"
     if "rl_post_training" in groups and "reasoning" in groups:
         return "关注 RLVR/GRPO/奖励模型如何改善推理过程，适合跟进 post-training 方法线。"
     if "agentic_rl" in groups and "memory_and_benchmarks" in groups:
         return "偏 Agent 系统能力与评测，适合看任务设计、工具/记忆/协作 scaffold。"
     if "planning_and_action" in groups:
         return "偏规划、轨迹或环境反馈，适合补 Agent 执行闭环和长程任务视角。"
+    return "命中你的关键词画像，建议先看摘要、任务设定和实验对象是否贴近当前阅读主线。"
+
+
+def wechat_what(item: Any) -> str:
+    groups = set(item.matched.keys())
+    if "agentic_rl" in groups and "rl_post_training" in groups:
+        return "重点看它如何把奖励、策略优化或训练信号接到 Agent 行为上。"
+    if "rl_post_training" in groups:
+        return "重点看 post-training 目标、奖励构造、优化算法和能力提升是否可迁移。"
+    if "memory_and_benchmarks" in groups:
+        return "重点看 benchmark/评测维度是否能复用到你的 Agentic Memory 阅读框架里。"
+    return "重点看问题定义、核心贡献和与已有 Agent/RL 工作的关系。"
+
+
+def wechat_method_hint(item: Any) -> str:
+    groups = set(item.matched.keys())
+    terms = [term for values in item.matched.values() for term in values]
+    if "grpo" in [term.lower() for term in terms] or "group relative policy optimization" in [term.lower() for term in terms]:
+        return "优先找 GRPO/RLVR 训练流程、reward 设计、advantage 分配方式。"
+    if "reward model" in [term.lower() for term in terms] or "verifiable reward" in [term.lower() for term in terms]:
+        return "优先找 reward model、verifiable reward、过程奖励/结果奖励的定义。"
+    if "agentic_rl" in groups:
+        return "优先找 Agent loop：任务分解、工具调用、环境反馈、rollout 和策略更新。"
+    if "planning_and_action" in groups:
+        return "优先找规划表示、轨迹生成、状态/动作空间与反馈闭环。"
+    return "优先看方法图、算法框、训练目标和关键符号定义。"
+
+
+def wechat_result_hint(item: Any) -> str:
+    groups = set(item.matched.keys())
+    if "memory_and_benchmarks" in groups:
+        return "不要只看分数；重点看数据集是否长程、多轮、真实交互，以及失败案例。"
+    if "rl_post_training" in groups:
+        return "重点比较 SFT/base/RL 后的提升，观察是否有泛化、稳定性和消融实验。"
+    if "agentic_rl" in groups:
+        return "重点看成功率、任务长度、工具调用质量和不同环境上的迁移。"
+    terms = []
+    for values in item.matched.values():
+        terms.extend(values)
     if terms:
-        return "关键词命中：" + "、".join(terms[:5]) + "。建议先看 abstract 和实验设置。"
-    return one_line_takeaway(item.paper.summary)
+        return "围绕命中关键词看主表、消融和 error analysis：" + "、".join(terms[:4]) + "。"
+    return "重点看主实验、消融实验和作者声称的核心结论是否被数据支撑。"
 
 
 def push_digest(
@@ -527,10 +670,10 @@ def push_digest(
         candidate_count,
         report_path,
         public_url=page_url,
-        max_items=min(5, max_items),
+        max_items=min(3, max_items),
     )
     title = f"Daily Papers - {report_date.isoformat()}"
-    wechat_title = f"论文速递 {report_date.isoformat()} · Top {min(5, len(selected))}"
+    wechat_title = f"论文速递 {report_date.isoformat()} · 结构化 Top {min(3, len(selected))}"
     results = []
     for channel in push_config.get("channels", []):
         if not channel_enabled(channel):
