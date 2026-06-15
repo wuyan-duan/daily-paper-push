@@ -407,6 +407,101 @@ def compact_digest(
     return "\n".join(lines).strip() + "\n"
 
 
+def wechat_digest(
+    report_date: dt.date,
+    selected: list[Any],
+    candidate_count: int,
+    report_path: Path,
+    public_url: str | None = None,
+    max_items: int = 5,
+) -> str:
+    shown = selected[:max_items]
+    lines = [
+        f"# 今日论文速递 · {report_date.isoformat()}",
+        "",
+        f"入选 **{len(selected)}** 篇，候选池 **{candidate_count}** 篇。微信里先看 Top {len(shown)}，完整列表点下面。",
+        "",
+    ]
+    if public_url:
+        lines.extend([f"[打开完整网页]({public_url})", ""])
+    else:
+        lines.extend([f"本地报告：`{report_path}`", ""])
+
+    for index, item in enumerate(shown, start=1):
+        paper = item.paper
+        lines.extend(
+            [
+                f"## {index}. {paper.title}",
+                "",
+                f"**分数**：{item.score}  ",
+                f"**标签**：{format_digest_tags(item)}",
+                "",
+                f"**看点**：{wechat_takeaway(item)}",
+                "",
+                f"[arXiv]({paper.arxiv_url}) · [PDF]({paper.pdf_url}) · [papers.cool]({paper.papers_cool_url})",
+                "",
+                "---",
+                "",
+            ]
+        )
+
+    if len(selected) > len(shown):
+        more = len(selected) - len(shown)
+        if public_url:
+            lines.append(f"还有 **{more}** 篇在[完整网页]({public_url})里。")
+        else:
+            lines.append(f"还有 **{more}** 篇在完整报告里。")
+    return "\n".join(lines).strip() + "\n"
+
+
+def format_digest_tags(item: Any) -> str:
+    tag_names = {
+        "agentic_rl": "Agentic RL",
+        "rl_post_training": "RL/Post-train",
+        "reasoning": "Reasoning",
+        "planning_and_action": "Planning/Action",
+        "memory_and_benchmarks": "Memory/Eval",
+    }
+    tags = [tag_names.get(group, group) for group in item.matched.keys()]
+    if not tags:
+        tags = ["Paper"]
+    return " / ".join(tags[:4])
+
+
+def one_line_takeaway(summary: str, width: int = 180) -> str:
+    cleaned = " ".join((summary or "").split())
+    if not cleaned:
+        return "摘要缺失，建议打开论文页查看。"
+    sentence_end = len(cleaned)
+    for marker in [". ", "? ", "! "]:
+        pos = cleaned.find(marker)
+        if 40 <= pos < sentence_end:
+            sentence_end = pos + 1
+    first = cleaned[:sentence_end].strip()
+    if len(first) <= width:
+        return first
+    return first[: width - 3].rstrip() + "..."
+
+
+def wechat_takeaway(item: Any) -> str:
+    groups = set(item.matched.keys())
+    terms = []
+    for values in item.matched.values():
+        terms.extend(values)
+    title = item.paper.title
+    if "agentic_rl" in groups and "rl_post_training" in groups:
+        return "强相关：同时命中 Agent/工具/多智能体 与 RL/post-training 信号，适合优先判断是否进入精读队列。"
+    if "rl_post_training" in groups and "reasoning" in groups:
+        return "关注 RLVR/GRPO/奖励模型如何改善推理过程，适合跟进 post-training 方法线。"
+    if "agentic_rl" in groups and "memory_and_benchmarks" in groups:
+        return "偏 Agent 系统能力与评测，适合看任务设计、工具/记忆/协作 scaffold。"
+    if "planning_and_action" in groups:
+        return "偏规划、轨迹或环境反馈，适合补 Agent 执行闭环和长程任务视角。"
+    if terms:
+        return "关键词命中：" + "、".join(terms[:5]) + "。建议先看 abstract 和实验设置。"
+    return one_line_takeaway(item.paper.summary)
+
+
 def push_digest(
     config: dict[str, Any],
     run_id: int,
@@ -417,15 +512,25 @@ def push_digest(
 ) -> list[dict[str, Any]]:
     push_config = config.get("push", {})
     max_items = int(push_config.get("max_items", 10))
+    page_url = public_url(config)
     markdown = compact_digest(
         report_date,
         selected,
         candidate_count,
         max_items,
         report_path,
-        public_url=public_url(config),
+        public_url=page_url,
+    )
+    wechat_markdown = wechat_digest(
+        report_date,
+        selected,
+        candidate_count,
+        report_path,
+        public_url=page_url,
+        max_items=min(5, max_items),
     )
     title = f"Daily Papers - {report_date.isoformat()}"
+    wechat_title = f"论文速递 {report_date.isoformat()} · Top {min(5, len(selected))}"
     results = []
     for channel in push_config.get("channels", []):
         if not channel_enabled(channel):
@@ -441,9 +546,9 @@ def push_digest(
             elif channel.get("type") == "github_issue":
                 status, response = push_github_issue(channel, title, markdown)
             elif channel.get("type") == "serverchan":
-                status, response = push_serverchan(channel, title, markdown)
+                status, response = push_serverchan(channel, wechat_title, wechat_markdown)
             elif channel.get("type") == "wxpusher":
-                status, response = push_wxpusher(channel, title, markdown, config)
+                status, response = push_wxpusher(channel, wechat_title, wechat_markdown, config)
             elif channel.get("type") == "email":
                 status, response = push_email(channel, title, markdown)
             else:
