@@ -815,6 +815,7 @@ def render_static_index(
       <div><span>Candidates</span><strong>{candidate_count}</strong></div>
       <div><span>Source</span><strong>papers.cool</strong></div>
     </section>
+    <p class="explain">Selected 是入选论文数，Candidates 是最近窗口内抓到的候选论文数。每张卡片左侧的数字是关键词相关度分，只用于排序，不代表论文质量或引用量。</p>
     <section>
       <h2>Top Papers</h2>
       <div class="papers">{cards or "<p>No selected papers.</p>"}</div>
@@ -828,7 +829,7 @@ def render_static_card(item: Any, index: int) -> str:
     paper = item.paper
     authors = ", ".join(paper.authors[:5]) + (f", et al. ({len(paper.authors)} authors)" if len(paper.authors) > 5 else "")
     return f"""<article class="paper">
-  <div class="score">{item.score}</div>
+  <div class="score" title="关键词相关度分：用于排序，不代表论文质量或引用量"><span>{item.score}</span><small>相关度</small></div>
   <div>
     <h3>{index}. <a href="{html.escape(paper.arxiv_url)}" target="_blank">{html.escape(paper.title)}</a></h3>
     <p class="meta">{html.escape(authors)} · {paper.updated.strftime('%Y-%m-%d')} · {html.escape(', '.join(sorted(paper.categories)))}</p>
@@ -1160,6 +1161,7 @@ def render_dashboard(config: dict[str, Any]) -> str:
       <div><span>Selected</span><strong>{run['selected_count'] if run else 0}</strong></div>
       <div><span>Candidates</span><strong>{run['candidate_count'] if run else 0}</strong></div>
     </section>
+    <p class="explain">卡片左侧数字是关键词相关度分：关键词命中越多、越靠近 Agentic RL / RL post-training 主线，分数越高；它不代表论文质量或引用量。</p>
 
     <section class="layout">
       <div>
@@ -1195,7 +1197,7 @@ def render_paper_card(row: sqlite3.Row) -> str:
     authors = json.loads(row["authors_json"])
     authors_text = ", ".join(authors[:5]) + (f", et al. ({len(authors)} authors)" if len(authors) > 5 else "")
     return f"""<article class="paper">
-  <div class="score">{row['score']}</div>
+  <div class="score" title="关键词相关度分：用于排序，不代表论文质量或引用量"><span>{row['score']}</span><small>相关度</small></div>
   <div>
     <h3><a href="{html.escape(row['arxiv_url'])}" target="_blank">{html.escape(row['title'])}</a></h3>
     <p class="meta">{html.escape(authors_text)} · {html.escape(row['updated'][:10])} · arXiv:{html.escape(row['arxiv_id'])}</p>
@@ -1235,7 +1237,10 @@ button:disabled { opacity:.6; cursor:wait; }
 .papers { display:grid; gap:10px; }
 .paper { display:grid; grid-template-columns:48px minmax(0,1fr); gap:14px; padding:14px; }
 .paper h3 { font-size:16px; margin-bottom:4px; letter-spacing:0; }
-.paper .score { width:40px; height:40px; border-radius:6px; background:#e8f0fe; color:var(--accent); display:grid; place-items:center; font-weight:700; }
+.explain { color:var(--muted); background:#eef3ff; border:1px solid #d6e2ff; border-radius:8px; padding:10px 12px; margin-bottom:18px; }
+.paper .score { width:48px; min-height:44px; border-radius:6px; background:#e8f0fe; color:var(--accent); display:grid; place-items:center; align-self:start; padding:6px 4px; }
+.paper .score span { font-weight:700; font-size:16px; line-height:1; }
+.paper .score small { color:#3c6ec7; font-size:10px; line-height:1; margin-top:2px; }
 .paper p { margin-bottom:8px; }
 .paper a + a { margin-left:10px; }
 aside { padding:16px; }
