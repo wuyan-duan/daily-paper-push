@@ -3,8 +3,8 @@ name: daily-paper-push
 on:
   workflow_dispatch:
   schedule:
-    # 10:20 Asia/Shanghai, Monday-Friday.
-    - cron: "20 2 * * 1-5"
+    # 10:20 Asia/Shanghai, every day.
+    - cron: "20 2 * * *"
 
 permissions:
   contents: write
