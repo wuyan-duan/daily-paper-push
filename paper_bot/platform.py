@@ -413,13 +413,16 @@ def wechat_digest(
     candidate_count: int,
     report_path: Path,
     public_url: str | None = None,
-    max_items: int = 5,
+    max_items: int = 10,
+    detail_items: int = 3,
 ) -> str:
     shown = selected[:max_items]
+    detailed = shown[:detail_items]
+    compact = shown[detail_items:]
     lines = [
         f"# 今日论文速递 · {report_date.isoformat()}",
         "",
-        f"入选 **{len(selected)}** 篇，候选池 **{candidate_count}** 篇。微信里先看 Top {len(shown)} 的结构化速读卡，完整列表点下面。",
+        f"入选 **{len(selected)}** 篇，候选池 **{candidate_count}** 篇。微信里先看 Top {len(shown)}：前 {len(detailed)} 篇是结构化速读卡，其余是快速扫读候选。",
         "",
         "说明：这是一版基于 papers.cool/arXiv 元数据和摘要的速读筛选；公式、图表和完整实验细节需要打开 PDF 精读。",
         "",
@@ -429,7 +432,7 @@ def wechat_digest(
     else:
         lines.extend([f"本地报告：`{report_path}`", ""])
 
-    for index, item in enumerate(shown, start=1):
+    for index, item in enumerate(detailed, start=1):
         paper = item.paper
         lines.extend(
             [
@@ -469,6 +472,27 @@ def wechat_digest(
                 "",
             ]
         )
+
+    if compact:
+        lines.extend(
+            [
+                f"## 快速扫读候选 · Top {len(detailed) + 1}-{len(shown)}",
+                "",
+            ]
+        )
+        for index, item in enumerate(compact, start=len(detailed) + 1):
+            paper = item.paper
+            lines.extend(
+                [
+                    f"### {index}. {paper.title}",
+                    "",
+                    f"- **优先级**：{item.score} / {format_digest_tags(item)}",
+                    f"- **摘要一句话**：{one_line_takeaway(paper.summary, width=140)}",
+                    f"- **为什么值得看**：{wechat_why(item)}",
+                    f"- **链接**：[arXiv]({paper.arxiv_url}) · [PDF]({paper.pdf_url})",
+                    "",
+                ]
+            )
 
     if len(selected) > len(shown):
         more = len(selected) - len(shown)
@@ -670,10 +694,11 @@ def push_digest(
         candidate_count,
         report_path,
         public_url=page_url,
-        max_items=min(3, max_items),
+        max_items=min(10, max_items),
+        detail_items=3,
     )
     title = f"Daily Papers - {report_date.isoformat()}"
-    wechat_title = f"论文速递 {report_date.isoformat()} · 结构化 Top {min(3, len(selected))}"
+    wechat_title = f"论文速递 {report_date.isoformat()} · Top {min(10, len(selected))}"
     results = []
     for channel in push_config.get("channels", []):
         if not channel_enabled(channel):
