@@ -1,0 +1,77 @@
+{
+  "paper_config": "paper_bot/config.json",
+  "data_dir": "paper_bot/data",
+  "reports_dir": "paper_bot/reports",
+  "site_dir": "paper_bot/site",
+  "public_base_url_env": "PAPER_BOT_PUBLIC_BASE_URL",
+  "timezone": "Asia/Shanghai",
+  "schedule": {
+    "enabled": true,
+    "time": "10:20",
+    "weekdays": [0, 1, 2, 3, 4]
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8770
+  },
+  "push": {
+    "enabled": true,
+    "max_items": 10,
+    "channels": [
+      {
+        "name": "local_markdown",
+        "type": "file",
+        "enabled": true
+      },
+      {
+        "name": "feishu",
+        "type": "feishu_webhook",
+        "enabled": false,
+        "url_env": "FEISHU_WEBHOOK_URL"
+      },
+      {
+        "name": "generic_webhook",
+        "type": "generic_webhook",
+        "enabled": false,
+        "url_env": "PAPER_PUSH_WEBHOOK_URL"
+      },
+      {
+        "name": "serverchan",
+        "type": "serverchan",
+        "enabled": false,
+        "enabled_env": "PAPER_BOT_SERVERCHAN",
+        "sendkey_env": "SERVERCHAN_SENDKEY"
+      },
+      {
+        "name": "wxpusher",
+        "type": "wxpusher",
+        "enabled": false,
+        "enabled_env": "PAPER_BOT_WXPUSHER",
+        "app_token_env": "WXPUSHER_APP_TOKEN",
+        "uid_env": "WXPUSHER_UID",
+        "topic_id_env": "WXPUSHER_TOPIC_ID"
+      },
+      {
+        "name": "github_issue",
+        "type": "github_issue",
+        "enabled": false,
+        "enabled_env": "PAPER_BOT_GITHUB_ISSUE",
+        "repo_env": "GITHUB_REPOSITORY",
+        "token_env": "GITHUB_TOKEN",
+        "labels": ["paper-bot", "daily-papers"]
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "enabled": false,
+        "host_env": "SMTP_HOST",
+        "port_env": "SMTP_PORT",
+        "user_env": "SMTP_USER",
+        "password_env": "SMTP_PASSWORD",
+        "from_env": "PAPER_PUSH_EMAIL_FROM",
+        "to_env": "PAPER_PUSH_EMAIL_TO",
+        "use_tls_env": "SMTP_USE_TLS"
+      }
+    ]
+  }
+}

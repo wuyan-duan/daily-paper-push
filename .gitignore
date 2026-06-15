@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.DS_Store
+paper_bot/data/*.sqlite3
+paper_bot/data/*.pid
+paper_bot/data/*.log

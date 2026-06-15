@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Papers - 2026-06-15</title>
+  <style>
+:root { color-scheme: light; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8fafc; --card:#fff; --accent:#0b57d0; --good:#137333; --bad:#a50e0e; }
+* { box-sizing: border-box; }
+body { margin:0; font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); }
+main { max-width:1180px; margin:0 auto; padding:24px; }
+h1,h2,h3,p { margin-top:0; }
+a { color:var(--accent); text-decoration:none; }
+.topbar { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; margin-bottom:20px; }
+.topbar h1 { font-size:28px; margin-bottom:4px; letter-spacing:0; }
+.topbar p,.muted,.meta { color:var(--muted); }
+.actions { display:flex; gap:10px; }
+button,.button { border:1px solid var(--accent); background:var(--accent); color:white; border-radius:6px; padding:8px 12px; cursor:pointer; font:inherit; }
+.button.secondary { color:var(--accent); background:white; }
+button:disabled { opacity:.6; cursor:wait; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+.stats div,.paper,aside { background:var(--card); border:1px solid var(--line); border-radius:8px; }
+.stats div { padding:14px; }
+.stats span { display:block; color:var(--muted); font-size:12px; }
+.stats strong { font-size:24px; }
+.layout { display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:20px; align-items:start; }
+.papers { display:grid; gap:10px; }
+.paper { display:grid; grid-template-columns:48px minmax(0,1fr); gap:14px; padding:14px; }
+.paper h3 { font-size:16px; margin-bottom:4px; letter-spacing:0; }
+.paper .score { width:40px; height:40px; border-radius:6px; background:#e8f0fe; color:var(--accent); display:grid; place-items:center; font-weight:700; }
+.paper p { margin-bottom:8px; }
+.paper a + a { margin-left:10px; }
+aside { padding:16px; }
+aside h2 { font-size:15px; margin:18px 0 8px; }
+aside h2:first-child { margin-top:0; }
+ul { padding-left:18px; }
+li span { color:var(--muted); display:block; overflow-wrap:anywhere; }
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th,td { border-bottom:1px solid var(--line); text-align:left; padding:6px 4px; }
+.report { white-space:pre-wrap; background:white; border:1px solid var(--line); border-radius:8px; padding:18px; overflow:auto; }
+@media (max-width: 820px) {
+  main { padding:16px; }
+  .topbar { display:block; }
+  .actions { margin-top:12px; }
+  .stats { grid-template-columns:repeat(2,1fr); }
+  .layout { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+  <main>
+    <section class="topbar">
+      <div>
+        <h1>Daily Papers</h1>
+        <p>RL / post-training / agentic RL queue from papers.cool</p>
+      </div>
+      <div class="actions">
+        <a class="button secondary" href="reports/2026-06-15_agentic_rl.html">Full Report</a>
+        <a class="button secondary" href="reports/2026-06-15_agentic_rl.md">Markdown</a>
+        <a class="button secondary" href="reports/2026-06-15_agentic_rl.json">JSON</a>
+      </div>
+    </section>
+    <section class="stats">
+      <div><span>Report Date</span><strong>2026-06-15</strong></div>
+      <div><span>Selected</span><strong>25</strong></div>
+      <div><span>Candidates</span><strong>335</strong></div>
+      <div><span>Source</span><strong>papers.cool</strong></div>
+    </section>
+    <section>
+      <h2>Top Papers</h2>
+      <div class="papers"><article class="paper">
+  <div class="score">76</div>
+  <div>
+    <h3>1. <a href="https://arxiv.org/abs/2606.13707" target="_blank">Orchestra-o1: Omnimodal Agent Orchestration</a></h3>
+    <p class="meta">Fan Zhang, Vireo Zhang, Shengju Qian, Haoxuan Li, Hao Wu, et al. (11 authors) · 2026-06-10 · cs.AI, cs.CL</p>
+    <p>agentic_rl: agentic reinforcement learning, multi-agent, agent orchestration, agent collaboration; rl_post_training: reinforcement learning, policy optimization, group relative policy optimization, grpo; memory_and_benchmarks: benchmark</p>
+    <a href="https://arxiv.org/pdf/2606.13707" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.13707" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">71</div>
+  <div>
+    <h3>2. <a href="https://arxiv.org/abs/2606.14691" target="_blank">CORA: Analyzing and bridging thinking-answer gap in Multimodal RLVR via Consistency-Oriented Reasoning Alignment</a></h3>
+    <p class="meta">Jiayue Cao, Zhicong Lu, Xuehan Sun, Wei Jia, Hongling Zheng, et al. (9 authors) · 2026-06-12 · cs.CL</p>
+    <p>rl_post_training: reinforcement learning, rlvr, policy optimization, reward model, +2 more; reasoning: reasoning; memory_and_benchmarks: evaluation</p>
+    <a href="https://arxiv.org/pdf/2606.14691" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14691" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">65</div>
+  <div>
+    <h3>3. <a href="https://arxiv.org/abs/2606.14302" target="_blank">Retrospective Progress-Aware Self-Refinement for LLM Agent Training</a></h3>
+    <p class="meta">Xinbei Ma, Congmin Zheng, Jiyang Qiu, Jiale Hong, Yao Yao, et al. (13 authors) · 2026-06-12 · cs.CL</p>
+    <p>agentic_rl: llm agent, agent training; rl_post_training: reinforcement learning; reasoning: outcome reward, reflection; planning_and_action: trajectory, rollout; memory_and_benchmarks: alfworld</p>
+    <a href="https://arxiv.org/pdf/2606.14302" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14302" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">60</div>
+  <div>
+    <h3>4. <a href="https://arxiv.org/abs/2606.13940" target="_blank">Can Post-Training Turn LLMs into Good Medical Coders? An Empirical Study of Generative ICD Coding</a></h3>
+    <p class="meta">Ziqing Wang, Weihao Li, Shijie Chen, Yuan Luo, Kaize Ding · 2026-06-11 · cs.CL</p>
+    <p>agentic_rl: tool use; rl_post_training: post-training, post training, reinforcement learning, grpo; memory_and_benchmarks: evaluation</p>
+    <a href="https://arxiv.org/pdf/2606.13940" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.13940" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">59</div>
+  <div>
+    <h3>5. <a href="https://arxiv.org/abs/2606.14502" target="_blank">From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI</a></h3>
+    <p class="meta">Yongheng Zhang, Ziang Liu, Jiaxuan Zhu, Shuai Wang, Xiangqi Chen, et al. (20 authors) · 2026-06-12 · cs.AI</p>
+    <p>agentic_rl: tool use; rl_post_training: reinforcement learning; reasoning: reasoning, chain-of-thought, chain of thought, self-improvement, +2 more; memory_and_benchmarks: memory, evaluation</p>
+    <a href="https://arxiv.org/pdf/2606.14502" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14502" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">58</div>
+  <div>
+    <h3>6. <a href="https://arxiv.org/abs/2606.14179" target="_blank">CacheRL:Multi-Turn Tool-Calling Agents via Cached Rollouts and Hybrid Reward</a></h3>
+    <p class="meta">Md Amirul Islam, Sumiran Thakur, Huancheng Chen, Su Min Park, Jiayun Wang, et al. (6 authors) · 2026-06-12 · cs.CL</p>
+    <p>agentic_rl: agent training; rl_post_training: reinforcement learning, policy optimization, group relative policy optimization, grpo; reasoning: reasoning; planning_and_action: trajectory</p>
+    <a href="https://arxiv.org/pdf/2606.14179" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14179" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">52</div>
+  <div>
+    <h3>7. <a href="https://arxiv.org/abs/2606.14211" target="_blank">Closing the Reflection Gap: A Free Calibration Bonus for Agentic RL</a></h3>
+    <p class="meta">Yinglun Zhu · 2026-06-12 · cs.AI, cs.LG</p>
+    <p>agentic_rl: agentic rl; rl_post_training: reward model; reasoning: self-improvement, self improvement, reflection; planning_and_action: environment feedback</p>
+    <a href="https://arxiv.org/pdf/2606.14211" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14211" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">45</div>
+  <div>
+    <h3>8. <a href="https://arxiv.org/abs/2606.14591" target="_blank">AudioDER: A Deduplication-Enhanced Reasoning Dataset for Post-Training Large Audio-Language Models</a></h3>
+    <p class="meta">Hui Geng, Yi Su, Han Yin, Tianjiao Wan, Qisheng Xu, et al. (10 authors) · 2026-06-12 · cs.AI</p>
+    <p>rl_post_training: post-training, post training; reasoning: reasoning, chain-of-thought, chain of thought</p>
+    <a href="https://arxiv.org/pdf/2606.14591" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14591" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">44</div>
+  <div>
+    <h3>9. <a href="https://arxiv.org/abs/2606.14249" target="_blank">HarnessX: A Composable, Adaptive, and Evolvable Agent Harness Foundry</a></h3>
+    <p class="meta">Tingyang Chen, Shuo Lu, Kang Zhao, Weicheng Meng, Hanlin Teng, et al. (14 authors) · 2026-06-12 · cs.AI</p>
+    <p>agentic_rl: multi-agent, agent harness; rl_post_training: reinforcement learning; memory_and_benchmarks: memory, gaia, alfworld</p>
+    <a href="https://arxiv.org/pdf/2606.14249" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14249" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">43</div>
+  <div>
+    <h3>10. <a href="https://arxiv.org/abs/2606.14693" target="_blank">Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning</a></h3>
+    <p class="meta">Pengxin Wang, Lihao Guo, Yi Xie, Bo Liu, Siyang Cao, et al. (6 authors) · 2026-06-12 · cs.AI, cs.MA</p>
+    <p>agentic_rl: multi-agent; rl_post_training: reinforcement learning, policy optimization; planning_and_action: decision making; downranked: traffic</p>
+    <a href="https://arxiv.org/pdf/2606.14693" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14693" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">42</div>
+  <div>
+    <h3>11. <a href="https://arxiv.org/abs/2606.13832" target="_blank">Safety-Contract Graph Multi-Agent Reinforcement Learning for Autonomous Network Security Response</a></h3>
+    <p class="meta">Jose Luis Lima de Jesus Silva · 2026-06-11 · cs.AI, cs.LG, cs.MA</p>
+    <p>agentic_rl: multi-agent; rl_post_training: reinforcement learning; memory_and_benchmarks: benchmark</p>
+    <a href="https://arxiv.org/pdf/2606.13832" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.13832" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">36</div>
+  <div>
+    <h3>12. <a href="https://arxiv.org/abs/2606.14445" target="_blank">tap: A File-Based Protocol for Heterogeneous LLM Agent Collaboration</a></h3>
+    <p class="meta">Minseo Kim · 2026-06-12 · cs.AI</p>
+    <p>agentic_rl: llm agent, multi-agent, agent collaboration; memory_and_benchmarks: memory</p>
+    <a href="https://arxiv.org/pdf/2606.14445" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14445" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">36</div>
+  <div>
+    <h3>13. <a href="https://arxiv.org/abs/2606.14130" target="_blank">Contract-Based Compositional Shielding for Safe Multi-Agent Reinforcement Learning</a></h3>
+    <p class="meta">Omar Adalat, Edwin Hamel-De le Court, Francesco Belardinelli · 2026-06-12 · cs.LG, cs.MA</p>
+    <p>agentic_rl: multi-agent; rl_post_training: reinforcement learning</p>
+    <a href="https://arxiv.org/pdf/2606.14130" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14130" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">35</div>
+  <div>
+    <h3>14. <a href="https://arxiv.org/abs/2606.14579" target="_blank">VISTA: View-Consistent Self-Verified Training for GUI Grounding</a></h3>
+    <p class="meta">Xinyu Qiu, Yunzhu Zhang, Heng Jia, Shuheng Shen, Changhua Meng, et al. (6 authors) · 2026-06-12 · cs.AI</p>
+    <p>rl_post_training: reinforcement learning, policy optimization, group relative policy optimization, grpo; planning_and_action: rollout</p>
+    <a href="https://arxiv.org/pdf/2606.14579" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14579" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">33</div>
+  <div>
+    <h3>15. <a href="https://arxiv.org/abs/2606.14694" target="_blank">AdaSR: Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization</a></h3>
+    <p class="meta">Junlong Tong, Wenqi Xu, Yingqi Fan, Anhao Zhao, Xuan Lu, et al. (7 authors) · 2026-06-12 · cs.CL</p>
+    <p>rl_post_training: policy optimization; reasoning: reasoning, deliberation</p>
+    <a href="https://arxiv.org/pdf/2606.14694" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14694" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">32</div>
+  <div>
+    <h3>16. <a href="https://arxiv.org/abs/2606.14415" target="_blank">CSPO: Constraint-Sensitive Policy Optimization for Safe Reinforcement Learning</a></h3>
+    <p class="meta">Ayoub Belouadah, Sylvain Kubler, Yves Le Traon · 2026-06-12 · cs.AI</p>
+    <p>rl_post_training: reinforcement learning, policy optimization</p>
+    <a href="https://arxiv.org/pdf/2606.14415" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14415" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">32</div>
+  <div>
+    <h3>17. <a href="https://arxiv.org/abs/2606.13795" target="_blank">Diffusion Policy Optimization without Drifting Apart</a></h3>
+    <p class="meta">Haozhe Jiang, Haiwen Feng, Pieter Abbeel, Jiantao Jiao, Angjoo Kanazawa, et al. (6 authors) · 2026-06-11 · cs.LG</p>
+    <p>rl_post_training: post-training, post training, policy optimization</p>
+    <a href="https://arxiv.org/pdf/2606.13795" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.13795" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">30</div>
+  <div>
+    <h3>18. <a href="https://arxiv.org/abs/2606.14470" target="_blank">GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge</a></h3>
+    <p class="meta">Pavan C Shekar, Abhishek H S, Aswanth Krishnan · 2026-06-12 · cs.AI, cs.CL, cs.LG</p>
+    <p>agentic_rl: agent memory; reasoning: reasoning; memory_and_benchmarks: memory, evaluation</p>
+    <a href="https://arxiv.org/pdf/2606.14470" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14470" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">29</div>
+  <div>
+    <h3>19. <a href="https://arxiv.org/abs/2606.14571" target="_blank">StreamMemBench: Streaming Evaluation of Agent Memory for Future-Oriented Assistance</a></h3>
+    <p class="meta">Guanming Liu, Yuqi Ren, Hansu Gu, Peng Zhang, Weihang Wang, et al. (8 authors) · 2026-06-12 · cs.AI</p>
+    <p>agentic_rl: agent memory; planning_and_action: trajectory; memory_and_benchmarks: memory, benchmark, evaluation</p>
+    <a href="https://arxiv.org/pdf/2606.14571" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14571" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">27</div>
+  <div>
+    <h3>20. <a href="https://arxiv.org/abs/2606.13808" target="_blank">The Culture Funnel: You Can&#x27;t Align What isn&#x27;t in the Data</a></h3>
+    <p class="meta">Ananya Sahu, Mehrnaz Mofakhami, Daniel D&#x27;Souza, Thomas Euyang, Julia Kreutzer, et al. (6 authors) · 2026-06-11 · cs.CL</p>
+    <p>rl_post_training: post-training, post training; reasoning: reasoning; memory_and_benchmarks: benchmark</p>
+    <a href="https://arxiv.org/pdf/2606.13808" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.13808" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">24</div>
+  <div>
+    <h3>21. <a href="https://arxiv.org/abs/2606.14536" target="_blank">Provably Safe, Yet Scalable Reinforcement Learning</a></h3>
+    <p class="meta">Kai S. Yun, Zeyang Li, Navid Azizan · 2026-06-12 · cs.LG, cs.RO</p>
+    <p>rl_post_training: reinforcement learning, policy optimization</p>
+    <a href="https://arxiv.org/pdf/2606.14536" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14536" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">23</div>
+  <div>
+    <h3>22. <a href="https://arxiv.org/abs/2606.14674" target="_blank">AgentSpec: Understanding Embodied Agent Scaffolds Through Controlled Composition</a></h3>
+    <p class="meta">Jixuan Chen, Jianzhi Shen, Haoqiang Kang, Zhi Hong, Qingyi Jiang, et al. (13 authors) · 2026-06-12 · cs.CL</p>
+    <p>rl_post_training: reinforcement learning; reasoning: reasoning, reflection; memory_and_benchmarks: memory</p>
+    <a href="https://arxiv.org/pdf/2606.14674" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14674" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">22</div>
+  <div>
+    <h3>23. <a href="https://arxiv.org/abs/2606.14672" target="_blank">Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows</a></h3>
+    <p class="meta">Shikun Liu, Mufei Li, Dongqi Fu, Haoyu Wang, Yinglong Xia, et al. (8 authors) · 2026-06-12 · cs.AI, cs.CL</p>
+    <p>agentic_rl: llm agent, multi-agent; reasoning: reasoning; memory_and_benchmarks: gaia</p>
+    <a href="https://arxiv.org/pdf/2606.14672" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14672" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">22</div>
+  <div>
+    <h3>24. <a href="https://arxiv.org/abs/2606.14418" target="_blank">Causal Object-Centric Models for Planning with Monte Carlo Tree Search</a></h3>
+    <p class="meta">Rodion Vakhitov, Leonid Ugadiarov, Alexey Skrynnik, Aleksandr Panov · 2026-06-12 · cs.AI, cs.LG, cs.RO</p>
+    <p>rl_post_training: reinforcement learning; planning_and_action: planning, decision making, world model; memory_and_benchmarks: benchmark</p>
+    <a href="https://arxiv.org/pdf/2606.14418" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14418" target="_blank">papers.cool</a>
+  </div>
+</article>
+<article class="paper">
+  <div class="score">20</div>
+  <div>
+    <h3>25. <a href="https://arxiv.org/abs/2606.14574" target="_blank">SIMMER: Benchmarking Latent Failures in LLM Executable Planning with a World Model</a></h3>
+    <p class="meta">Xiaoxin Lu, Ranran Haoran Zhang, Rui Zhang · 2026-06-12 · cs.AI, cs.CL</p>
+    <p>reasoning: reasoning; planning_and_action: planning, world model; memory_and_benchmarks: benchmark</p>
+    <a href="https://arxiv.org/pdf/2606.14574" target="_blank">PDF</a>
+    <a href="https://papers.cool/arxiv/2606.14574" target="_blank">papers.cool</a>
+  </div>
+</article></div>
+    </section>
+  </main>
+</body>
+</html>

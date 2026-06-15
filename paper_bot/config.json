@@ -1,0 +1,115 @@
+{
+  "base_url": "https://papers.cool",
+  "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG",
+    "cs.RO",
+    "cs.MA"
+  ],
+  "lookback_days": 7,
+  "max_results": 25,
+  "min_score": 8,
+  "keywords": {
+    "agentic_rl": {
+      "weight": 6,
+      "terms": [
+        "agentic reinforcement learning",
+        "agentic rl",
+        "llm agent",
+        "language agent",
+        "multi-agent",
+        "tool use",
+        "tool learning",
+        "agent training",
+        "agent memory",
+        "long-horizon agent",
+        "workflow agent",
+        "autonomous agent",
+        "agent orchestration",
+        "agent collaboration",
+        "agent harness",
+        "agent environment"
+      ]
+    },
+    "rl_post_training": {
+      "weight": 8,
+      "terms": [
+        "post-training",
+        "post training",
+        "reinforcement learning",
+        "reinforcement learning from human feedback",
+        "rlhf",
+        "rlvr",
+        "verifiable reward",
+        "preference optimization",
+        "policy optimization",
+        "reward model",
+        "group relative policy optimization",
+        "grpo",
+        "ppo",
+        "dpo"
+      ]
+    },
+    "reasoning": {
+      "weight": 4,
+      "terms": [
+        "reasoning",
+        "chain-of-thought",
+        "chain of thought",
+        "self-improvement",
+        "self improvement",
+        "self-play",
+        "process reward",
+        "outcome reward",
+        "reflection",
+        "deliberation"
+      ]
+    },
+    "planning_and_action": {
+      "weight": 3,
+      "terms": [
+        "planning",
+        "acting",
+        "action sequence",
+        "trajectory",
+        "rollout",
+        "environment feedback",
+        "decision making",
+        "world model"
+      ]
+    },
+    "memory_and_benchmarks": {
+      "weight": 2,
+      "terms": [
+        "memory",
+        "episodic memory",
+        "long-term memory",
+        "benchmark",
+        "evaluation",
+        "gaia",
+        "webarena",
+        "alfworld",
+        "scienceworld",
+        "nethack"
+      ]
+    }
+  },
+  "negative_keywords": [
+    "railway",
+    "inventory",
+    "bioacoustic",
+    "medical imaging",
+    "protein",
+    "genome",
+    "wireless",
+    "quantum",
+    "fluid",
+    "traffic signal",
+    "transcript processing",
+    "high school",
+    "traffic",
+    "driving",
+    "autonomous driving"
+  ]
+}
