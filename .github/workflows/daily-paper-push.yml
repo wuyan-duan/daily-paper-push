@@ -36,8 +36,6 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
           PAPER_BOT_GITHUB_ISSUE: "1"
           PAPER_BOT_PUBLIC_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
-          PAPER_BOT_SERVERCHAN: ${{ secrets.SERVERCHAN_SENDKEY != '' }}
-          PAPER_BOT_WXPUSHER: ${{ secrets.WXPUSHER_APP_TOKEN != '' }}
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
           WXPUSHER_APP_TOKEN: ${{ secrets.WXPUSHER_APP_TOKEN }}
           WXPUSHER_UID: ${{ secrets.WXPUSHER_UID }}

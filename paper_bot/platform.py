@@ -461,6 +461,10 @@ def push_digest(
 def channel_enabled(channel: dict[str, Any]) -> bool:
     if channel.get("enabled", False):
         return True
+    if channel.get("type") == "serverchan" and os.environ.get(channel.get("sendkey_env", "SERVERCHAN_SENDKEY"), ""):
+        return True
+    if channel.get("type") == "wxpusher" and os.environ.get(channel.get("app_token_env", "WXPUSHER_APP_TOKEN"), ""):
+        return True
     env_name = channel.get("enabled_env")
     return bool(env_name and os.environ.get(env_name, "").lower() in {"1", "true", "yes", "on"})
 
