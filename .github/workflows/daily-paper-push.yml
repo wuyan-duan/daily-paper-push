@@ -3,8 +3,9 @@ name: daily-paper-push
 on:
   workflow_dispatch:
   schedule:
-    # 10:20 Asia/Shanghai, every day.
-    - cron: "20 2 * * *"
+    # 10:20, 11:20, 12:20 Asia/Shanghai, every day.
+    # Multiple slots make GitHub's best-effort scheduler less likely to miss a day.
+    - cron: "20 2,3,4 * * *"
 
 permissions:
   contents: write
@@ -26,11 +27,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Decide whether to run
+        id: guard
+        shell: bash
+        run: |
+          report_date="$(TZ=Asia/Shanghai date +%F)"
+          report_path="paper_bot/reports/${report_date}_agentic_rl.md"
+          echo "report_date=${report_date}" >> "$GITHUB_OUTPUT"
+          if [[ "${{ github.event_name }}" == "schedule" && -f "${report_path}" ]]; then
+            echo "should_run=0" >> "$GITHUB_OUTPUT"
+            echo "Report already exists for ${report_date}; skipping duplicate scheduled push."
+          else
+            echo "should_run=1" >> "$GITHUB_OUTPUT"
+            echo "Running paper push for ${report_date}."
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.should_run == '1'
         with:
           python-version: "3.11"
 
       - name: Run daily paper job
+        if: steps.guard.outputs.should_run == '1'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -46,6 +64,7 @@ jobs:
           python paper_bot/platform.py run
 
       - name: Commit generated reports
+        if: steps.guard.outputs.should_run == '1'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -56,13 +75,16 @@ jobs:
           fi
 
       - name: Configure GitHub Pages
+        if: steps.guard.outputs.should_run == '1'
         uses: actions/configure-pages@v5
 
       - name: Upload GitHub Pages artifact
+        if: steps.guard.outputs.should_run == '1'
         uses: actions/upload-pages-artifact@v3
         with:
           path: paper_bot/site
 
       - name: Deploy GitHub Pages
+        if: steps.guard.outputs.should_run == '1'
         id: deployment
         uses: actions/deploy-pages@v4
