@@ -1,0 +1,211 @@
+# RL / Post-Training / Agentic RL Reading Queue - 2026-08-17
+
+Source: papers.cool Atom feeds for cs.AI, cs.CL, cs.LG, cs.RO, cs.MA.
+Window: last 7 day(s). Candidates fetched in window: 277. Minimum score: 8.
+
+## Top Picks
+
+### 59 - GRPO Beyond English: A Large-Scale Study of GRPO in Non-English and Multilingual Settings
+
+- arXiv: [2608.13698](https://arxiv.org/abs/2608.13698) | [PDF](https://arxiv.org/pdf/2608.13698) | [papers.cool](https://papers.cool/arxiv/2608.13698)
+- Authors: Konstantin Dobler, Federico Scozzafava, Jonathan Janke, Mohamed Ali, Simon Lehnerer
+- Published: 2026-08-13 18:43 UTC | Categories: cs.CL, cs.LG
+- Why it matched: rl_post_training: reinforcement learning, rlvr, policy optimization, group relative policy optimization, +1 more; reasoning: reasoning; memory_and_benchmarks: evaluation
+- Abstract skim: Reinforcement Learning with Verifiable Rewards (RLVR), often optimized with Group Relative Policy Optimization (GRPO), has become a central recipe for improving the reasoning capabilities of pretrained language models but current studies remain heavily English-centric. We conduct a large-scale empirical study of...
+
+### 46 - Designing Reinforcement Learning for Diffusion Models: A Unified Path-Space View
+
+- arXiv: [2608.14430](https://arxiv.org/abs/2608.14430) | [PDF](https://arxiv.org/pdf/2608.14430) | [papers.cool](https://papers.cool/arxiv/2608.14430)
+- Authors: Yixian Xu, Yuanrui Zhang, Shengjie Luo, Liwei Wang, Di He
+- Published: 2026-08-14 16:11 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, grpo; planning_and_action: trajectory, rollout
+- Abstract skim: Reinforcement learning (RL) post-training provides a direct way to align diffusion models with human preferences and task-specific rewards. However, current RL algorithms for diffusion models remain fragmented: reverse-trajectory methods rely on discretized likelihood ratios, whereas forward-matching methods train...
+
+### 43 - APTER: Adaptive Post-Training with Expert-Grounded Rubrics
+
+- arXiv: [2608.14212](https://arxiv.org/abs/2608.14212) | [PDF](https://arxiv.org/pdf/2608.14212) | [papers.cool](https://papers.cool/arxiv/2608.14212)
+- Authors: Xukai Wang, Liangqi Li, Zhiyue Xu, Jingang Zhou, Xiaoyu Shi, Jiansheng Cai, et al. (9 authors)
+- Published: 2026-08-14 11:42 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning; reasoning: reasoning; memory_and_benchmarks: evaluation
+- Abstract skim: As large language models enter professional domains, they must satisfy domain constraints, include critical evidence, and provide complete reasoning rather than merely produce fluent responses. Existing post-training methods often rely on holistic preferences or outcome-level verification, while recent rubric-based...
+
+### 43 - AgilePE: Autonomous UAV Pursuit-Evasion via Self-Play Reinforcement Learning
+
+- arXiv: [2608.14135](https://arxiv.org/abs/2608.14135) | [PDF](https://arxiv.org/pdf/2608.14135) | [papers.cool](https://papers.cool/arxiv/2608.14135)
+- Authors: Wenhao Tang, Tianyang Chen, Zhejun Cui, Boyuan An, Jiayu Chen, Ruize Zhang, et al. (12 authors)
+- Published: 2026-08-14 09:41 UTC | Categories: cs.LG, cs.RO
+- Why it matched: rl_post_training: reinforcement learning, policy optimization; reasoning: self-play; planning_and_action: trajectory, decision making
+- Abstract skim: Autonomous pursuit-evasion is a fundamental challenge for Unmanned Aerial Vehicles (UAVs), requiring rapid decision-making under tightly coupled dynamics and continuously changing opponent behaviors. Traditional rule-based or differential-game approaches often struggle with high-dimensional aerial interactions and...
+
+### 39 - AdsWorldEngine: A Self-Evolving Conversational Advertising Agent through Orchestrator and Tool Coevolution
+
+- arXiv: [2608.13833](https://arxiv.org/abs/2608.13833) | [PDF](https://arxiv.org/pdf/2608.13833) | [papers.cool](https://papers.cool/arxiv/2608.13833)
+- Authors: Simiao Zuo, Chenhui Xu, Yimeng Jia, Qiang Lou, Jian Jiao, Denis Charles
+- Published: 2026-08-13 23:53 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: agentic reinforcement learning; rl_post_training: reinforcement learning, grpo; reasoning: reflection
+- Abstract skim: Conversational advertising aims to deliver useful ads within multi-turn assistant interactions. Unlike conventional query-based advertising, where the user's intent is often expressed in a short standalone query, conversational ads must infer latent commercial intent from the current user query, the assistant...
+
+### 37 - Rollplex: Cross-Phase GPU Spatial Sharing for Vision Language Model Post-Training
+
+- arXiv: [2608.14498](https://arxiv.org/abs/2608.14498) | [PDF](https://arxiv.org/pdf/2608.14498) | [papers.cool](https://papers.cool/arxiv/2608.14498)
+- Authors: Hanfeng Lu, Tianyu Feng, Suyi Li, Yuheng Zhao, Wei Gao, Shaopan Xiong, et al. (11 authors)
+- Published: 2026-08-14 17:13 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning; planning_and_action: rollout; memory_and_benchmarks: memory
+- Abstract skim: Vision-language models (VLMs) enable embodied agents to reason and act from visual observations and language instructions. Reinforcement learning (RL) post-training enhances these capabilities using task feedback, but current on-policy RL runtimes execute rollout, reference scoring, and actor training in strict...
+
+### 37 - ARC: Fair Relative Advantage Comparison in Open-Ended Real-World Interaction
+
+- arXiv: [2608.13622](https://arxiv.org/abs/2608.13622) | [PDF](https://arxiv.org/pdf/2608.13622) | [papers.cool](https://papers.cool/arxiv/2608.13622)
+- Authors: Yongqi Tong, Tan Li Hui Faith, Choy Zhen Wen Marcus, Zhou Jin, Kewei Fu, Jiang-Ming Yang, et al. (8 authors)
+- Published: 2026-08-13 01:51 UTC | Categories: cs.AI, cs.CL
+- Why it matched: agentic_rl: tool use; rl_post_training: reward model; reasoning: reasoning; planning_and_action: acting, rollout
+- Abstract skim: Open-ended real-world interaction admits multiple valid behaviors: an agent may answer directly, ask for clarification, provide progress updates, or confirm before acting. This flexibility breaks a core assumption behind group-based RL: rollouts compared within a group are no longer guaranteed to be behaviorally...
+
+### 34 - Reinforcement Learning-Based Production Scheduling in an Industry-Based Coating Scenario Using the Digital Model Playground
+
+- arXiv: [2608.14122](https://arxiv.org/abs/2608.14122) | [PDF](https://arxiv.org/pdf/2608.14122) | [papers.cool](https://papers.cool/arxiv/2608.14122)
+- Authors: Arne Kröger, Ralf Buschermöhle, Wilhelm Hasselbring, Henrik Wilbers
+- Published: 2026-08-14 09:28 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, ppo; memory_and_benchmarks: benchmark
+- Abstract skim: Production scheduling in complex manufacturing environments is challenging when sequence-dependent setup times, stochastic disturbances, and due-date constraints must be addressed simultaneously. While reinforcement learning (RL) methods have shown promising results in research, most studies rely on simplified...
+
+### 34 - Bootstrapping Niche Multilingual Code Translation via Reinforcement Learning with Execution-Based Verifiable Supervision
+
+- arXiv: [2608.13854](https://arxiv.org/abs/2608.13854) | [PDF](https://arxiv.org/pdf/2608.13854) | [papers.cool](https://papers.cool/arxiv/2608.13854)
+- Authors: Kouki Yuki, Jie Zeng, Kyoko Ogawa, Ryunosuke Ikeda, Yohei Kobashi, Takeshi Kojima, et al. (9 authors)
+- Published: 2026-08-14 00:56 UTC | Categories: cs.CL
+- Why it matched: rl_post_training: reinforcement learning, reward model, grpo; memory_and_benchmarks: benchmark
+- Abstract skim: Code translation must preserve executable behavior across many programming languages, yet neural code translation has largely focused on a few popular languages such as C++, Java, and Python. This leaves a niche, many-to-many setting where parallel supervision is sparse, producing plausible but non-executable...
+
+### 32 - Wrong but Useful: Trajectory Value Beyond Answer Correctness in Multi-Agent Messages
+
+- arXiv: [2608.14375](https://arxiv.org/abs/2608.14375) | [PDF](https://arxiv.org/pdf/2608.14375) | [papers.cool](https://papers.cool/arxiv/2608.14375)
+- Authors: Chih-Hsuan Yang, Anjir Ahmed Chowdhury, Cheng-Hau Yang, Weijian Zheng, Fernando Llorente, Xiaolong Ma, et al. (10 authors)
+- Published: 2026-08-14 15:16 UTC | Categories: cs.AI, cs.CL, cs.LG
+- Why it matched: agentic_rl: multi-agent; reasoning: reasoning, deliberation; planning_and_action: trajectory; memory_and_benchmarks: benchmark
+- Abstract skim: Multi-agent reasoning systems often use agreement, confidence, or automated scores to decide which messages should shape a final answer. Such filtering assumes that a message likely to be correct is also worth keeping. Yet a wrong answer can contain a useful decomposition, constraint, or scientific principle. We...
+
+### 29 - A Graph-Based Reinforcement Learning Framework for Structured Drift Diagnosis and Recovery in Autonomous LLM Agents
+
+- arXiv: [2608.14109](https://arxiv.org/abs/2608.14109) | [PDF](https://arxiv.org/pdf/2608.14109) | [papers.cool](https://papers.cool/arxiv/2608.14109)
+- Authors: Ismail El Hamraoui, Sagar Jose, Nicolas Bureau, Robert Plana
+- Published: 2026-08-14 09:12 UTC | Categories: cs.AI, cs.LG, cs.MA
+- Why it matched: rl_post_training: reinforcement learning; reasoning: reasoning; memory_and_benchmarks: benchmark, evaluation
+- Abstract skim: Autonomous LLM agents are increasingly deployed in complex real-world workflows, yet they remain vulnerable to runtime behavioral drift, a silent deviation from the original task that can lead to irreversible side effects on external systems. Existing approaches address drift at the prompt level but lack structured...
+
+### 28 - MedClaw: Heuristic Agent Harness for Long-Horizon Surgical Video Reasoning
+
+- arXiv: [2608.14015](https://arxiv.org/abs/2608.14015) | [PDF](https://arxiv.org/pdf/2608.14015) | [papers.cool](https://papers.cool/arxiv/2608.14015)
+- Authors: Yingying Fan, Penghui Du, Leyan Zhu, Runze He, Zimeng Wu, Yuxuan Zhang, et al. (13 authors)
+- Published: 2026-08-14 07:03 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: agent harness; reasoning: reasoning; memory_and_benchmarks: benchmark, evaluation
+- Abstract skim: Understanding tens-of-minutes surgical videos requires long-horizon temporal reasoning, answering what happens before, after, or across stages of a procedure by grounding the question in visual evidence spread across time. Existing approaches handle this poorly: a one-shot vision-language model (VLM) compresses the...
+
+### 28 - XAI-Guided Conservative Decentralized Execution for Offline Multi-Agent Network Slicing
+
+- arXiv: [2608.13982](https://arxiv.org/abs/2608.13982) | [PDF](https://arxiv.org/pdf/2608.13982) | [papers.cool](https://papers.cool/arxiv/2608.13982)
+- Authors: Eslam Eldeeb, Hatim Chergui, Merouane Debbah
+- Published: 2026-08-14 05:54 UTC | Categories: cs.MA
+- Why it matched: agentic_rl: multi-agent; rl_post_training: reinforcement learning
+- Abstract skim: The recent advances toward sixth-generation (6G) and beyond-6G networks have accelerated the need for intelligent resource management mechanisms capable of supporting heterogeneous services under shared infrastructures in network slicing. However, resource allocation in network slicing naturally forms a resource-...
+
+### 27 - MemoryLake on MemoryArena: A Matched Study of Agent Memory Backends
+
+- arXiv: [2608.13883](https://arxiv.org/abs/2608.13883) | [PDF](https://arxiv.org/pdf/2608.13883) | [papers.cool](https://papers.cool/arxiv/2608.13883)
+- Authors: Chaoqun Zhan, Qiang Zhou, Guannan Li, Zhenqiang Huang, Qianjin Wang
+- Published: 2026-08-14 02:19 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: agent memory; planning_and_action: planning; memory_and_benchmarks: memory, benchmark, evaluation
+- Abstract skim: Most agent-memory benchmarks test post-hoc recall, whereas MemoryArena evaluates whether memory supports interdependent, multi-session task completion. We compare MemoryLake, a structured multi-track memory backend, with Mem0, text-embedding-3-small vector RAG, and a long-context control across all five MemoryArena...
+
+### 24 - Learning to Run Power Networks: Effective AlphaZero-inspired Topological Control
+
+- arXiv: [2608.14114](https://arxiv.org/abs/2608.14114) | [PDF](https://arxiv.org/pdf/2608.14114) | [papers.cool](https://papers.cool/arxiv/2608.14114)
+- Authors: Lukas Zetto, Benjamin Schäfer, Qiong Huang
+- Published: 2026-08-14 09:16 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, ppo
+- Abstract skim: As the integration of volatile renewable energy sources increases the strain on modern power grids, the use of Reinforcement Learning (RL) for autonomous topological reconfiguration has emerged as a promising research field to keep strained grids stable and operational. Compared to traditional redispatching...
+
+### 24 - Post-training Quantization for Hybrid Iterative Generative Models
+
+- arXiv: [2608.13932](https://arxiv.org/abs/2608.13932) | [PDF](https://arxiv.org/pdf/2608.13932) | [papers.cool](https://papers.cool/arxiv/2608.13932)
+- Authors: Jing Gao, Junyi Wu, Wei Wang, Yan Yan, Yao Zhao
+- Published: 2026-08-14 04:07 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: post-training, post training
+- Abstract skim: Iterative Generative Models (IGMs) span autoregressive and diffusion paradigms, and hybrid variants that couple them can achieve remarkable image-generation fidelity. However, their iterative inference incurs substantial computational overhead, making Post-training Quantization (PTQ) appealing for acceleration,...
+
+### 24 - BICPO-VLA: Behavior-Identified Continuation Preference Optimization for Smooth Asynchronous Vision-Language-Action Control
+
+- arXiv: [2608.13924](https://arxiv.org/abs/2608.13924) | [PDF](https://arxiv.org/pdf/2608.13924) | [papers.cool](https://papers.cool/arxiv/2608.13924)
+- Authors: Ming Shang, Yuchen Huang, Jiaoyang Chen, Haoyuan Hu, Han Yu, Liping Song, et al. (11 authors)
+- Published: 2026-08-14 03:51 UTC | Categories: cs.RO
+- Why it matched: rl_post_training: preference optimization, dpo
+- Abstract skim: The request-to-handoff gap has three coupled sources: ambiguity about the behavior intended at request time, physical-state drift accumulated during action generation, and residual incompatibility when the new action finally assumes control. BICPO-VLA addresses them in sequence. First, an instruction-aware causal...
+
+### 24 - Knowledge-Data-Dual-Driven Reinforcement Learning for Autonomous Vehicle Control in Mixed Traffic
+
+- arXiv: [2608.13878](https://arxiv.org/abs/2608.13878) | [PDF](https://arxiv.org/pdf/2608.13878) | [papers.cool](https://papers.cool/arxiv/2608.13878)
+- Authors: Jie Fang, Wei Zheng, Mengyun Xu, Eui-Jin Kim
+- Published: 2026-08-14 02:07 UTC | Categories: cs.RO
+- Why it matched: rl_post_training: reinforcement learning; reasoning: reasoning; planning_and_action: decision making; downranked: traffic
+- Abstract skim: In mixed traffic, decision-making for autonomous vehicles (AVs) confronts three interrelated challenges. First, physics-based priors incorporated into reinforcement learning (RL) models fail to capture latent interactive vehicle intentions and diverse driver behaviors, limiting the proactive reasoning capabilities....
+
+### 22 - Polaris : Multi Agentic System for Conversational Enterprise Analytics
+
+- arXiv: [2608.14246](https://arxiv.org/abs/2608.14246) | [PDF](https://arxiv.org/pdf/2608.14246) | [papers.cool](https://papers.cool/arxiv/2608.14246)
+- Authors: Varuni H K, Soham Sarkar, Jay Kumar, Goutham Krishnan, Tanvi Johari, Avinash Bharadwaj, et al. (7 authors)
+- Published: 2026-08-14 12:26 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: multi-agent, agent orchestration; reasoning: reasoning; memory_and_benchmarks: evaluation
+- Abstract skim: In today's fast-paced environment, the ability to swiftly access, understand, and act on data is no longer optional; it is essential. Yet most organizations remain data-rich but insight-poor, constrained by the complexity of querying, interpreting, and explaining enterprise-scale information. We present Polaris, a...
+
+### 20 - Dynamic Multi-Depot Vehicle Routing with Online Requests: Event-Driven Transformer--DRL and Rolling-Horizon Benchmarking
+
+- arXiv: [2608.13799](https://arxiv.org/abs/2608.13799) | [PDF](https://arxiv.org/pdf/2608.13799) | [papers.cool](https://papers.cool/arxiv/2608.13799)
+- Authors: Faezeh Ardali, Gerald M. Knapp
+- Published: 2026-08-13 22:05 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: policy optimization, ppo; memory_and_benchmarks: benchmark
+- Abstract skim: This paper presents an event-driven learning and benchmarking framework for the Dynamic Multi-Depot Vehicle Routing Problem with progressively revealed requests and evolving vehicle states. Masked MLP and Transformer policies are trained through behavior cloning and proximal policy optimization. Deterministic...
+
+### 18 - DeaMoE: Efficient MoE Structure for Fast Small-Batch Decoding
+
+- arXiv: [2608.14385](https://arxiv.org/abs/2608.14385) | [PDF](https://arxiv.org/pdf/2608.14385) | [papers.cool](https://papers.cool/arxiv/2608.14385)
+- Authors: Zewen Jin, Shen Fu, Zeping Duan, Shannon Wang, Weihao Wu, Chengjie Tang, et al. (11 authors)
+- Published: 2026-08-14 15:25 UTC | Categories: cs.AI, cs.LG
+- Why it matched: rl_post_training: post-training, post training; memory_and_benchmarks: memory
+- Abstract skim: Mixture-of-Experts (MoE) models have been widely adopted in real-time interactive applications such as coding assistants, real-time audio-video interaction systems. To meet the extremely low response latency requirements of these scenarios, practitioners commonly employ small-batch decoding, under which MoE...
+
+### 18 - CORAL: Curriculum-Optimized Reward Adaptation for LiDAR-Based Goal-Directed Urban Driving
+
+- arXiv: [2608.14332](https://arxiv.org/abs/2608.14332) | [PDF](https://arxiv.org/pdf/2608.14332) | [papers.cool](https://papers.cool/arxiv/2608.14332)
+- Authors: Anisa Saleem, Duksu Kim
+- Published: 2026-08-14 14:22 UTC | Categories: cs.LG, cs.RO
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, ppo; memory_and_benchmarks: evaluation; downranked: traffic, driving
+- Abstract skim: Reinforcement learning is promising for autonomous urban driving, but long-horizon goal-directed navigation asks a policy to acquire several competing behaviors at once--reaching a distant goal, tracking a route, avoiding obstacles, obeying signals--and a fixed objective gives no order in which to learn them. This...
+
+### 18 - Removing Temporal Note Redundancy Improves Multimodal Reinforcement Learning for Medicine
+
+- arXiv: [2608.14157](https://arxiv.org/abs/2608.14157) | [PDF](https://arxiv.org/pdf/2608.14157) | [papers.cool](https://papers.cool/arxiv/2608.14157)
+- Authors: Chenran Weng, Joo Seung Lee, Malini Mahendra, Anil Aswani
+- Published: 2026-08-14 10:11 UTC | Categories: cs.AI, cs.LG
+- Why it matched: rl_post_training: reinforcement learning; memory_and_benchmarks: evaluation
+- Abstract skim: Mechanical ventilation is a critical life-support intervention, requiring dynamic adjustments to ventilator settings as a patient's condition evolves. While reinforcement learning (RL) offers a promising framework for optimizing these sequential decisions, standard approaches rely primarily on structured electronic...
+
+### 18 - HERMES: a multi-agent framework for structured knowledge extraction from ultra-long documents in geoscience
+
+- arXiv: [2608.14055](https://arxiv.org/abs/2608.14055) | [PDF](https://arxiv.org/pdf/2608.14055) | [papers.cool](https://papers.cool/arxiv/2608.14055)
+- Authors: Ziqi Song, Zongyuan Xiang, James G. Ogg, Bruce S. Lieberman, Gabi Ogg, Natalia López Carranza, et al. (15 authors)
+- Published: 2026-08-14 07:59 UTC | Categories: cs.CL
+- Why it matched: agentic_rl: multi-agent; memory_and_benchmarks: evaluation
+- Abstract skim: Authoritative scientific knowledge in geoscience remains largely trapped in legacy monographs and historical literature, where unstructured text and complex layouts hinder computational access. We introduce HERMES, a scalable multi-agent framework that extracts structured data from ultra-long scientific documents....
+
+### 18 - Batch-wise Adaptive Pruning: Periodic Neuron Activation-Aware Weight Pruning for Language Reasoning Model
+
+- arXiv: [2608.14003](https://arxiv.org/abs/2608.14003) | [PDF](https://arxiv.org/pdf/2608.14003) | [papers.cool](https://papers.cool/arxiv/2608.14003)
+- Authors: Yongmin Kim, Shota Takashiro, Yusuke Iwasawa, Takeshi Kojima, Yutaka Matsuo
+- Published: 2026-08-14 06:46 UTC | Categories: cs.CL
+- Why it matched: reasoning: reasoning, chain-of-thought, chain of thought; memory_and_benchmarks: memory
+- Abstract skim: Large Reasoning Models (LRMs) achieve strong performance on complex tasks through extended chain-of-thought generation, but incur substantial computational costs during inference. In production settings, batched inference is essential for high throughput, yet the existing training-free adaptive pruning methods we...
+
+## Tuning Notes
+
+- Edit `paper_bot/config.json` to add or remove tracked arXiv categories and keyword groups.
+- Good next filters to add: preferred labs/authors, exclude applied domains, or separate lists for theory RL vs LLM post-training.
