@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>2026-08-27_agentic_rl.html</title><style>
+:root { color-scheme: light; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8fafc; --card:#fff; --accent:#0b57d0; --good:#137333; --bad:#a50e0e; }
+* { box-sizing: border-box; }
+body { margin:0; font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); }
+main { max-width:1180px; margin:0 auto; padding:24px; }
+h1,h2,h3,p { margin-top:0; }
+a { color:var(--accent); text-decoration:none; }
+.topbar { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; margin-bottom:20px; }
+.topbar h1 { font-size:28px; margin-bottom:4px; letter-spacing:0; }
+.topbar p,.muted,.meta { color:var(--muted); }
+.actions { display:flex; gap:10px; }
+button,.button { border:1px solid var(--accent); background:var(--accent); color:white; border-radius:6px; padding:8px 12px; cursor:pointer; font:inherit; }
+.button.secondary { color:var(--accent); background:white; }
+button:disabled { opacity:.6; cursor:wait; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+.stats div,.paper,aside { background:var(--card); border:1px solid var(--line); border-radius:8px; }
+.stats div { padding:14px; }
+.stats span { display:block; color:var(--muted); font-size:12px; }
+.stats strong { font-size:24px; }
+.layout { display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:20px; align-items:start; }
+.papers { display:grid; gap:10px; }
+.paper { display:grid; grid-template-columns:48px minmax(0,1fr); gap:14px; padding:14px; }
+.paper h3 { font-size:16px; margin-bottom:4px; letter-spacing:0; }
+.explain { color:var(--muted); background:#eef3ff; border:1px solid #d6e2ff; border-radius:8px; padding:10px 12px; margin-bottom:18px; }
+.paper .score { width:48px; min-height:44px; border-radius:6px; background:#e8f0fe; color:var(--accent); display:grid; place-items:center; align-self:start; padding:6px 4px; }
+.paper .score span { font-weight:700; font-size:16px; line-height:1; }
+.paper .score small { color:#3c6ec7; font-size:10px; line-height:1; margin-top:2px; }
+.paper p { margin-bottom:8px; }
+.paper a + a { margin-left:10px; }
+aside { padding:16px; }
+aside h2 { font-size:15px; margin:18px 0 8px; }
+aside h2:first-child { margin-top:0; }
+ul { padding-left:18px; }
+li span { color:var(--muted); display:block; overflow-wrap:anywhere; }
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th,td { border-bottom:1px solid var(--line); text-align:left; padding:6px 4px; }
+.report { white-space:pre-wrap; background:white; border:1px solid var(--line); border-radius:8px; padding:18px; overflow:auto; }
+@media (max-width: 820px) {
+  main { padding:16px; }
+  .topbar { display:block; }
+  .actions { margin-top:12px; }
+  .stats { grid-template-columns:repeat(2,1fr); }
+  .layout { grid-template-columns:1fr; }
+}
+</style></head>
+<body><main><p><a href="/">Back</a></p><pre class="report"># RL / Post-Training / Agentic RL Reading Queue - 2026-08-27
+
+Source: papers.cool Atom feeds for cs.AI, cs.CL, cs.LG, cs.RO, cs.MA.
+Window: last 7 day(s). Candidates fetched in window: 383. Minimum score: 8.
+
+## Top Picks
+
+### 54 - AdaVDR: Adaptive Tool Use and Reflection for Video Deep Research
+
+- arXiv: [2608.25559](https://arxiv.org/abs/2608.25559) | [PDF](https://arxiv.org/pdf/2608.25559) | [papers.cool](https://papers.cool/arxiv/2608.25559)
+- Authors: Xintong Zhang, Xiaomeng Fan, Shilin Yan, Ekko He, Zicheng Liu, Zijian Zou, et al. (10 authors)
+- Published: 2026-08-26 09:07 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use; rl_post_training: reinforcement learning; reasoning: reasoning, reflection; planning_and_action: trajectory; memory_and_benchmarks: benchmark
+- Abstract skim: Video deep research answers complex questions by jointly understanding video content and retrieving external knowledge from the open Web. However, diverse questions and videos require different tool-use strategies, and inappropriate tool calls can produce incorrect results. Uncertain grounding and retrieval also...
+
+### 49 - TailSFT: Filtered Fine-Tuning Improves Post-Training Performance
+
+- arXiv: [2608.25756](https://arxiv.org/abs/2608.25756) | [PDF](https://arxiv.org/pdf/2608.25756) | [papers.cool](https://papers.cool/arxiv/2608.25756)
+- Authors: Sadhika Malladi, Samy Jelassi, Dylan Foster, Jordan T. Ash, Akshay Krishnamurthy
+- Published: 2026-08-26 13:04 UTC | Categories: cs.AI, cs.LG
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, grpo; reasoning: reasoning
+- Abstract skim: Reinforcement learning post-training drives reasoning and agentic capabilities in modern AI systems, yet a growing body of work shows that it is most effective when used to fine-tune an already capable base model. We question whether existing pipelines yield models that are most suitable for reinforcement learning....
+
+### 49 - V-Rubrics: Visual Faithfulness via Rubric-Based Reinforcement Learning
+
+- arXiv: [2608.25580](https://arxiv.org/abs/2608.25580) | [PDF](https://arxiv.org/pdf/2608.25580) | [papers.cool](https://papers.cool/arxiv/2608.25580)
+- Authors: Shulin Tian, Minglun Li, Yuhao Dong, Hao Ding, Jiarui Yao, Haiwen Diao, et al. (9 authors)
+- Published: 2026-08-26 09:40 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, grpo; reasoning: reasoning
+- Abstract skim: Vision-language models can produce fluent answers that are insufficiently grounded in the visual evidence: a single unsupported object, chart value, or intermediate inference can undermine an otherwise plausible response. We argue that this is a credit-assignment failure in multimodal post-training. Scalar outcome...
+
+### 49 - Demystifying Reinforcement Learning Post-Training of Language Models
+
+- arXiv: [2608.24949](https://arxiv.org/abs/2608.24949) | [PDF](https://arxiv.org/pdf/2608.24949) | [papers.cool](https://papers.cool/arxiv/2608.24949)
+- Authors: Donovan Clay, Saket Gollapudi, Sankar Harilal, Min Jang, Jacob Morrison, Sewoong Oh, et al. (7 authors)
+- Published: 2026-08-24 18:39 UTC | Categories: cs.AI, cs.CL, cs.LG
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning; reasoning: reasoning
+- Abstract skim: Reinforcement learning (RL) post-training has emerged as a powerful framework for enhancing the capabilities of large language models (LLMs), enabling impressive reasoning, math, and coding capabilities. Yet for many researchers and practitioners, the principles behind classical RL remain a &quot;black box&quot;. In this...
+
+### 47 - AFDBench: A Reasoning-First AI Scientist for NationalWeather Service Forecast Discussions
+
+- arXiv: [2608.24954](https://arxiv.org/abs/2608.24954) | [PDF](https://arxiv.org/pdf/2608.24954) | [papers.cool](https://papers.cool/arxiv/2608.24954)
+- Authors: Manmeet Singh, Somnath Luitel, Prabhjot Singh, Manraaj Banga, Naveen Sudharsan, Josh Durkee
+- Published: 2026-08-25 02:02 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, group relative policy optimization, grpo; reasoning: reasoning; memory_and_benchmarks: benchmark
+- Abstract skim: Large language models (LLMs) hallucinate numerical values when generating high-stakes meteorological text, posing risks for weather communication. We present AFDBench, an AI meteorologist that generates professional Area Forecast Discussions (AFDs) by reasoning through structured AI weather forecast data from...
+
+### 42 - Tunable Tool-Call Rates in LLM Agents via Representation Steering
+
+- arXiv: [2608.25198](https://arxiv.org/abs/2608.25198) | [PDF](https://arxiv.org/pdf/2608.25198) | [papers.cool](https://papers.cool/arxiv/2608.25198)
+- Authors: Yuqi Chen, Vincent Siu, Yang Liu, Dawn Song, Chenguang Wang
+- Published: 2026-08-25 22:35 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: llm agent, tool use; rl_post_training: post-training, post training
+- Abstract skim: Deciding whether to call a tool is a core competence of an LLM agent, and a costly one to get wrong: needless calls add latency, accrue cost, and may trigger irreversible side effects, while missing calls leave the model confidently wrong on questions it could only answer through tool-calls. Models manage this...
+
+### 41 - $R^3$: Training Robots to Reason in Natural Language via Reinforcement Learning
+
+- arXiv: [2608.26053](https://arxiv.org/abs/2608.26053) | [PDF](https://arxiv.org/pdf/2608.26053) | [papers.cool](https://papers.cool/arxiv/2608.26053)
+- Authors: Lehong Wu, Yuxiao Qu, Zheyuan Hu, Ivan Zhang, Limin Wei, Zackory Erickson, et al. (7 authors)
+- Published: 2026-08-26 17:25 UTC | Categories: cs.AI, cs.CL, cs.LG, cs.RO
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning; reasoning: reasoning
+- Abstract skim: Reasoning in language allows foundation models to spend more test-time compute on hard problems, such as those requiring decomposition, constraint tracking, and prediction of future consequences. Whether this mechanism can improve robotic manipulation remains unclear, where long-horizon tasks require tracking...
+
+### 36 - Cooperative Multi-Agent Reinforcement Learning for Adaptive Aggregation in Semi-Supervised Federated Learning with non-IID Data
+
+- arXiv: [2608.25794](https://arxiv.org/abs/2608.25794) | [PDF](https://arxiv.org/pdf/2608.25794) | [papers.cool](https://papers.cool/arxiv/2608.25794)
+- Authors: Rene Glitza, Luca Becker, Rainer Martin
+- Published: 2026-08-26 13:46 UTC | Categories: cs.LG
+- Why it matched: agentic_rl: multi-agent; rl_post_training: reinforcement learning
+- Abstract skim: Federated Learning (FL) enables distributed training of machine learning models while preserving data privacy. However, FL struggles with heterogeneous, non-IID client data distributions, resulting in sub-optimal and biased global models. In this paper, we propose pFedMARL, a novel approach leveraging Multi-Agent...
+
+### 36 - Learning What to Share and What to Personalize: Hierarchical Strategy Co-Evolution for Agent Memory
+
+- arXiv: [2608.25329](https://arxiv.org/abs/2608.25329) | [PDF](https://arxiv.org/pdf/2608.25329) | [papers.cool](https://papers.cool/arxiv/2608.25329)
+- Authors: Yupeng Han, Shuochen Liu, Kai Zhang, Ze Liu, Zhihong Pan, Xianquan Wang
+- Published: 2026-08-26 03:24 UTC | Categories: cs.AI, cs.CL
+- Why it matched: agentic_rl: agent memory; rl_post_training: policy optimization; memory_and_benchmarks: memory
+- Abstract skim: Memory-augmented agents maintain compact user profiles throughout extended conversations, enabling personalized and consistent responses without the need to process the entire dialogue history. The quality of these user profiles relies on the underlying memory management strategy: at each step, the agent must...
+
+### 34 - ShuttleArena: Interpretable Self-Play in Physics-Based Badminton
+
+- arXiv: [2608.25246](https://arxiv.org/abs/2608.25246) | [PDF](https://arxiv.org/pdf/2608.25246) | [papers.cool](https://papers.cool/arxiv/2608.25246)
+- Authors: Peize Ding
+- Published: 2026-08-26 00:07 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: policy optimization, ppo; reasoning: self-play; planning_and_action: trajectory; memory_and_benchmarks: evaluation
+- Abstract skim: Badminton is a compact but challenging domain for game AI: a player must choose a physically feasible shuttle trajectory, anticipate the opponent&#x27;s interception, and recover to a court position whose value depends on the opponent&#x27;s next response. The central challenge is that shot selection and recovery are not...
+
+### 33 - BVR Sim: An Open and High-Throughput Environment for Heterogeneous Air-Combat Reinforcement Learning
+
+- arXiv: [2608.25419](https://arxiv.org/abs/2608.25419) | [PDF](https://arxiv.org/pdf/2608.25419) | [papers.cool](https://papers.cool/arxiv/2608.25419)
+- Authors: Haocheng Sun, Mulai Tan
+- Published: 2026-08-26 06:21 UTC | Categories: cs.LG, cs.MA
+- Why it matched: agentic_rl: multi-agent; rl_post_training: reinforcement learning; planning_and_action: decision making
+- Abstract skim: Beyond-visual-range (BVR) air combat is a challenging reinforcement-learning domain characterized by partial observability, long-horizon decision making, energy management, and limited weapons. We present BVR Sim, an open-source Gymnasium-style environment designed for heterogeneous air-combat reinforcement...
+
+### 33 - Where vs What: Decomposing Structural and Content Failures in LLM-Generated Structured Outputs
+
+- arXiv: [2608.25358](https://arxiv.org/abs/2608.25358) | [PDF](https://arxiv.org/pdf/2608.25358) | [papers.cool](https://papers.cool/arxiv/2608.25358)
+- Authors: Yiwei Zhang, Chengke Wu, Li Wang, Jianqiang Li
+- Published: 2026-08-26 04:32 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: reinforcement learning, rlvr, grpo; reasoning: reasoning
+- Abstract skim: Structured outputs such as JSON and tables are central to modern LLM-based systems, yet generation failures are evaluated monolithically, conflating two distinct error modes: placement errors (correct values at wrong positions) and value errors (wrong values at intended positions). We introduce Structure-Content...
+
+### 32 - Beyond Pairwise Feedback: Listwise Vision-Language Supervision for Preference-Based Reward Learning
+
+- arXiv: [2608.25350](https://arxiv.org/abs/2608.25350) | [PDF](https://arxiv.org/pdf/2608.25350) | [papers.cool](https://papers.cool/arxiv/2608.25350)
+- Authors: Srivalli Katkuri, Maxwell Kawada, Juan Wachs
+- Published: 2026-08-26 04:09 UTC | Categories: cs.LG, cs.RO
+- Why it matched: rl_post_training: reinforcement learning, reinforcement learning from human feedback, rlhf, reward model
+- Abstract skim: Vision-language models (VLMs) have emerged as a powerful source of supervision for reinforcement learning, enabling agents to leverage rich semantic knowledge during training. Inspired by the success of preference-based reward learning (PbRL) in reinforcement learning from human feedback (RLHF), vision-language...
+
+### 31 - VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning
+
+- arXiv: [2608.26105](https://arxiv.org/abs/2608.26105) | [PDF](https://arxiv.org/pdf/2608.26105) | [papers.cool](https://papers.cool/arxiv/2608.26105)
+- Authors: Junxiang Xu, Ruisi Wang, Fanyi Pu, Maijunxian Wang, Ran Ji, Tongxi Zhou, et al. (52 authors)
+- Published: 2026-08-26 17:59 UTC | Categories: cs.AI, cs.LG, cs.RO
+- Why it matched: rl_post_training: reinforcement learning, verifiable reward; reasoning: reasoning; memory_and_benchmarks: evaluation
+- Abstract skim: Native visual reasoning treats visual generation as the medium of reasoning itself: visual states (i.e. images and videos) are not merely inputs to be understood or outputs to be rendered, but first-class substrates for problem solving beyond language. Yet progress remains bottlenecked by the lack of scalable...
+
+### 30 - Agentic Game Development as a Verifiable Trajectory Data Engine for Scaling World Models
+
+- arXiv: [2608.25518](https://arxiv.org/abs/2608.25518) | [PDF](https://arxiv.org/pdf/2608.25518) | [papers.cool](https://papers.cool/arxiv/2608.25518)
+- Authors: Pengfei Zhou, Hexin Wang, Zhengfeiyang Zhang, Yixing Ma, Zhenglin Wan, Kaipeng Zhang, et al. (8 authors)
+- Published: 2026-08-26 08:28 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning; planning_and_action: trajectory
+- Abstract skim: A common strategy for scaling world models is to train on more crawled video with more compute. We argue that this strategy is inefficient: scaling world models also requires a recursive data engine that offers grounded reward signals. The success of code agents illustrates why this matters. As code is executable,...
+
+### 30 - Simulating Cognitive Smart Freight Corridors with Agent-Based Models and Reinforcement Learning
+
+- arXiv: [2608.25193](https://arxiv.org/abs/2608.25193) | [PDF](https://arxiv.org/pdf/2608.25193) | [papers.cool](https://papers.cool/arxiv/2608.25193)
+- Authors: Madelaine Martinez-Ferguson, Chun Wang, Mustafa Can Camur, Xueping Li
+- Published: 2026-08-25 22:17 UTC | Categories: cs.LG
+- Why it matched: agentic_rl: multi-agent; rl_post_training: reinforcement learning
+- Abstract skim: Smart freight corridors offer a practical pathway for connected and automated vehicle (CAV) deployment in freight transportation, but physical experimentation is expensive and existing approaches rely on predefined control policies that cannot capture adaptive behaviors. This paper presents an agent-based modeling...
+
+### 28 - Paint What You See: Benchmarking Dexterous Visual Tool Use in Multimodal Agents
+
+- arXiv: [2608.25417](https://arxiv.org/abs/2608.25417) | [PDF](https://arxiv.org/pdf/2608.25417) | [papers.cool](https://papers.cool/arxiv/2608.25417)
+- Authors: Shudong Liu, Dongyang Chen, Enci Zhang, Jinwei Liang, Zheng Ma, Lewei Lu
+- Published: 2026-08-26 06:19 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use; planning_and_action: planning, trajectory; memory_and_benchmarks: benchmark, evaluation
+- Abstract skim: Evaluation is shifting from static QA toward agentic settings where models act through external tools. We identify a critical yet underexplored capability within this space - dexterous visual tool use: fine-grained, closed-loop parameterized visual action in which models infer tool parameters from visual evidence,...
+
+### 27 - MACGen: Toward Functionally Correct and Secure Code Generation via Multi-Agent Collaboration
+
+- arXiv: [2608.25457](https://arxiv.org/abs/2608.25457) | [PDF](https://arxiv.org/pdf/2608.25457) | [papers.cool](https://papers.cool/arxiv/2608.25457)
+- Authors: Miseon Yu, Jaehoon Choi, Younghan Lee, Yunheung Paek
+- Published: 2026-08-26 07:21 UTC | Categories: cs.AI, cs.MA
+- Why it matched: agentic_rl: multi-agent, agent collaboration; planning_and_action: planning
+- Abstract skim: Despite their strong ability to generate code, large language models often fail to produce secure code, as their outputs frequently contain security vulnerabilities. Secure code generation is inherently challenging because it requires solving a multi-objective problem: functional correctness and security. Existing...
+
+### 26 - Mitigating LLM sycophancy with RL-based fine-tuning: Bayesian Truth Serum approach
+
+- arXiv: [2608.25267](https://arxiv.org/abs/2608.25267) | [PDF](https://arxiv.org/pdf/2608.25267) | [papers.cool](https://papers.cool/arxiv/2608.25267)
+- Authors: Serhii Mytsyk, Yiming Zhang, Vikram Krishnamurthy
+- Published: 2026-08-26 01:07 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: policy optimization, group relative policy optimization, grpo; memory_and_benchmarks: benchmark
+- Abstract skim: Large language models (LLMs) frequently exhibit \emph{sycophancy}: they adapt their answers to a user&#x27;s stated beliefs or preferences instead of reporting what they hold to be true, which lowers factual accuracy and can amplify misinformation. This paper proposes a methodology for mitigating sycophancy that employs...
+
+### 25 - From Memorization to Absorption: Mixed-Policy RL for Continual Knowledge Injection
+
+- arXiv: [2608.25243](https://arxiv.org/abs/2608.25243) | [PDF](https://arxiv.org/pdf/2608.25243) | [papers.cool](https://papers.cool/arxiv/2608.25243)
+- Authors: Zhibo Hou, Fan Zhao, Zhiyu An, Wan Du
+- Published: 2026-08-26 00:04 UTC | Categories: cs.CL, cs.LG
+- Why it matched: rl_post_training: reinforcement learning, grpo; reasoning: reasoning
+- Abstract skim: Continual knowledge injection is essential for keeping large language models up-to-date in a fast-evolving world. Existing methods rely on supervised fine-tuning (SFT), which memorizes injected facts in their training format but fails to generalize across paraphrasing, document combinations, and reasoning. To...
+
+### 25 - The Dialect Tax: Dialectal Biases Persist throughout the Language Modeling Pipeline
+
+- arXiv: [2608.24952](https://arxiv.org/abs/2608.24952) | [PDF](https://arxiv.org/pdf/2608.24952) | [papers.cool](https://papers.cool/arxiv/2608.24952)
+- Authors: Elle
+- Published: 2026-08-24 22:46 UTC | Categories: cs.AI, cs.CL, cs.LG
+- Why it matched: rl_post_training: post-training, post training; reasoning: reasoning
+- Abstract skim: Systematic dialectal performance gaps in language models (LMs) are well documented, but the source of these disparities within the modern language modeling pipeline remains unclear. Our study traces this &quot;dialect tax&quot; across the natural language processing pipeline. Using parallel English dialect corpora that hold...
+
+### 24 - A Visual Dependence-Aware Framework for Multimodal Unsupervised Continual Post-Training
+
+- arXiv: [2608.26095](https://arxiv.org/abs/2608.26095) | [PDF](https://arxiv.org/pdf/2608.26095) | [papers.cool](https://papers.cool/arxiv/2608.26095)
+- Authors: Kaichen Li, Zhilin Zhu, Jianhao Huang, Zhengqin Lai, Baochen Xiong, Zibo Shao, et al. (10 authors)
+- Published: 2026-08-26 17:57 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: post-training, post training
+- Abstract skim: In this paper, we explore a novel task of Multimodal Unsupervised Continual Post-Training (MU-CPT), enabling deployed MLLMs to continually evolve from streaming unlabeled data. Existing unsupervised post-training methods for MLLMs typically optimize target tokens uniformly, overlooking their heterogeneous visual...
+
+### 24 - LifePlanner: Evaluating LLM Agents for Geo-spatial Planning with Social Media Data
+
+- arXiv: [2608.25039](https://arxiv.org/abs/2608.25039) | [PDF](https://arxiv.org/pdf/2608.25039) | [papers.cool](https://papers.cool/arxiv/2608.25039)
+- Authors: Zhen Dong, Yuning Peng, Yutao Shi, Lei Zhong, Yongsen Mao, Yuan Liu, et al. (7 authors)
+- Published: 2026-08-25 18:28 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use; reasoning: reasoning; planning_and_action: planning; memory_and_benchmarks: benchmark, evaluation
+- Abstract skim: Geo-spatial planning, like trip design, is a realistic testbed for LLM agents because it requires grounded tool use, noisy evidence retrieval, and multi-constraint reasoning. Most benchmarks, however, only provide clean geospatial data and tools, missing the open-ended social signals that people use in daily...
+
+### 24 - Physics-Informed Error Field Learning: A Post-Training Optimization Framework for Physics-Informed Neural Networks
+
+- arXiv: [2608.24970](https://arxiv.org/abs/2608.24970) | [PDF](https://arxiv.org/pdf/2608.24970) | [papers.cool](https://papers.cool/arxiv/2608.24970)
+- Authors: Jiuyun Sun, Yong Zhang
+- Published: 2026-08-25 09:34 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: post-training, post training
+- Abstract skim: Physics-Informed Neural Networks (PINNs) have emerged as an important class of numerical methods for solving partial differential equations (PDEs). However, during the late-stage optimization process, further parameter updates often yield diminishing accuracy improvements while increasing computational costs. To...
+
+### 23 - AudioLens: Multi-Perspective Speech Clustering with Reasoning Audio-Language Models
+
+- arXiv: [2608.25177](https://arxiv.org/abs/2608.25177) | [PDF](https://arxiv.org/pdf/2608.25177) | [papers.cool](https://papers.cool/arxiv/2608.25177)
+- Authors: Wenjun Huang, Qiaosong Chu, Tiger Shao, Pengfei Zhang, Yutong Song, Hanning Chen, et al. (14 authors)
+- Published: 2026-08-25 21:47 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: preference optimization; reasoning: reasoning; memory_and_benchmarks: benchmark
+- Abstract skim: Audio clustering is a fundamental task for organizing rapidly growing speech collections, supporting applications such as conversational analysis and speech-driven discovery. However, existing methods rely on fixed acoustic similarity metrics or ASR-based text pipelines, limiting their ability to reorganize the same...
+
+## Tuning Notes
+
+- Edit `paper_bot/config.json` to add or remove tracked arXiv categories and keyword groups.
+- Good next filters to add: preferred labs/authors, exclude applied domains, or separate lists for theory RL vs LLM post-training.
+</pre></main></body></html>
