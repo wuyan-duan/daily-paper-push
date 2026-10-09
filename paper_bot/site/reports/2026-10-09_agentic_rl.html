@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>2026-10-09_agentic_rl.html</title><style>
+:root { color-scheme: light; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8fafc; --card:#fff; --accent:#0b57d0; --good:#137333; --bad:#a50e0e; }
+* { box-sizing: border-box; }
+body { margin:0; font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); }
+main { max-width:1180px; margin:0 auto; padding:24px; }
+h1,h2,h3,p { margin-top:0; }
+a { color:var(--accent); text-decoration:none; }
+.topbar { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; margin-bottom:20px; }
+.topbar h1 { font-size:28px; margin-bottom:4px; letter-spacing:0; }
+.topbar p,.muted,.meta { color:var(--muted); }
+.actions { display:flex; gap:10px; }
+button,.button { border:1px solid var(--accent); background:var(--accent); color:white; border-radius:6px; padding:8px 12px; cursor:pointer; font:inherit; }
+.button.secondary { color:var(--accent); background:white; }
+button:disabled { opacity:.6; cursor:wait; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+.stats div,.paper,aside { background:var(--card); border:1px solid var(--line); border-radius:8px; }
+.stats div { padding:14px; }
+.stats span { display:block; color:var(--muted); font-size:12px; }
+.stats strong { font-size:24px; }
+.layout { display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:20px; align-items:start; }
+.papers { display:grid; gap:10px; }
+.paper { display:grid; grid-template-columns:48px minmax(0,1fr); gap:14px; padding:14px; }
+.paper h3 { font-size:16px; margin-bottom:4px; letter-spacing:0; }
+.explain { color:var(--muted); background:#eef3ff; border:1px solid #d6e2ff; border-radius:8px; padding:10px 12px; margin-bottom:18px; }
+.paper .score { width:48px; min-height:44px; border-radius:6px; background:#e8f0fe; color:var(--accent); display:grid; place-items:center; align-self:start; padding:6px 4px; }
+.paper .score span { font-weight:700; font-size:16px; line-height:1; }
+.paper .score small { color:#3c6ec7; font-size:10px; line-height:1; margin-top:2px; }
+.paper p { margin-bottom:8px; }
+.paper a + a { margin-left:10px; }
+aside { padding:16px; }
+aside h2 { font-size:15px; margin:18px 0 8px; }
+aside h2:first-child { margin-top:0; }
+ul { padding-left:18px; }
+li span { color:var(--muted); display:block; overflow-wrap:anywhere; }
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th,td { border-bottom:1px solid var(--line); text-align:left; padding:6px 4px; }
+.report { white-space:pre-wrap; background:white; border:1px solid var(--line); border-radius:8px; padding:18px; overflow:auto; }
+@media (max-width: 820px) {
+  main { padding:16px; }
+  .topbar { display:block; }
+  .actions { margin-top:12px; }
+  .stats { grid-template-columns:repeat(2,1fr); }
+  .layout { grid-template-columns:1fr; }
+}
+</style></head>
+<body><main><p><a href="/">Back</a></p><pre class="report"># RL / Post-Training / Agentic RL Reading Queue - 2026-10-09
+
+Source: papers.cool Atom feeds for cs.AI, cs.CL, cs.LG, cs.RO, cs.MA.
+Window: last 7 day(s). Candidates fetched in window: 678. Minimum score: 8.
+
+## Top Picks
+
+### 65 - Fed-GRPO: Reward-Signal-Driven Federated Group Relative Policy Optimization
+
+- arXiv: [2610.11502](https://arxiv.org/abs/2610.11502) | [PDF](https://arxiv.org/pdf/2610.11502) | [papers.cool](https://papers.cool/arxiv/2610.11502)
+- Authors: Pengxin Guo, Shuang Zeng, Zonggen Li, Weiying Zheng, Mengting Liu, Liangqiong Qu
+- Published: 2026-10-08 08:40 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, group relative policy optimization, grpo; reasoning: reasoning
+- Abstract skim: Large Language Models (LLMs) have shown strong reasoning capabilities when fine-tuned with reinforcement learning (RL), particularly through Group Relative Policy Optimization (GRPO). However, existing GRPO methods assume centralized access to training data, which may not hold in practice due to privacy or...
+
+### 53 - MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement
+
+- arXiv: [2610.11959](https://arxiv.org/abs/2610.11959) | [PDF](https://arxiv.org/pdf/2610.11959) | [papers.cool](https://papers.cool/arxiv/2610.11959)
+- Authors: Xiaomi LLM-Core Team, :, Zongming Qiao, Ziyue Hua, Zirui Ou, Zihao Yue, et al. (150 authors)
+- Published: 2026-10-08 13:41 UTC | Categories: cs.CL
+- Why it matched: agentic_rl: agentic rl; rl_post_training: reinforcement learning; reasoning: self-improvement, self improvement; planning_and_action: trajectory, rollout
+- Abstract skim: Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of model intelligence by scaling RL compute. Prior to RL, we conduct mid-training on a broad...
+
+### 53 - SynCo: Data Synthesis Co-Training for Self-Evolving LLMs via Multi-Agent Reinforcement Learning
+
+- arXiv: [2610.11345](https://arxiv.org/abs/2610.11345) | [PDF](https://arxiv.org/pdf/2610.11345) | [papers.cool](https://papers.cool/arxiv/2610.11345)
+- Authors: Wei Yang, Shawn Li, Yuehan Qin, Yawei Wang, Mingxi Wang, Shixuan Li, et al. (11 authors)
+- Published: 2026-10-08 06:40 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: multi-agent; rl_post_training: reinforcement learning; reasoning: reasoning, self-improvement, self improvement
+- Abstract skim: Self-evolving LLM agents promise to improve autonomously through continual interaction and learning, reducing their dependence on manually curated supervision. Realizing this promise requires not only updating the agent, but also evolving its training experience as its capabilities change. However, most existing...
+
+### 51 - DataSense-Bench: The First Step Toward an AI Scientist
+
+- arXiv: [2610.12190](https://arxiv.org/abs/2610.12190) | [PDF](https://arxiv.org/pdf/2610.12190) | [papers.cool](https://papers.cool/arxiv/2610.12190)
+- Authors: Yudi Zhang, Mingyu Cao, Lu Yin, Mykola Pechenizkiy, Shiwei Liu
+- Published: 2026-10-08 15:50 UTC | Categories: cs.LG
+- Why it matched: agentic_rl: tool use; rl_post_training: post-training, post training; reasoning: self-improvement, self improvement; memory_and_benchmarks: benchmark, evaluation
+- Abstract skim: As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this capability through the fundamental...
+
+### 49 - Residual Advantage: Student-Relative Teacher Guidance for RL with Verifiable Rewards
+
+- arXiv: [2610.11519](https://arxiv.org/abs/2610.11519) | [PDF](https://arxiv.org/pdf/2610.11519) | [papers.cool](https://papers.cool/arxiv/2610.11519)
+- Authors: Xiaobing Chen, Zhiqi Pang
+- Published: 2026-10-08 08:52 UTC | Categories: cs.CL
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, rlvr, +1 more; reasoning: reasoning
+- Abstract skim: Reinforcement learning with verifiable rewards (RLVR) and on-policy distillation (OPD) have become two main paradigms for post-training reasoning models. RLVR gives each response a single outcome label, leaving the steps inside it without separate credit. OPD provides token-level guidance at student-visited...
+
+### 48 - ReTeach: Building a Self-Teacher through Multi-Round Reflection and Retry
+
+- arXiv: [2610.11529](https://arxiv.org/abs/2610.11529) | [PDF](https://arxiv.org/pdf/2610.11529) | [papers.cool](https://papers.cool/arxiv/2610.11529)
+- Authors: Yafeng Tang, Hao Li, Hongsheng Yu, Qiang Fu
+- Published: 2026-10-08 08:58 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use; rl_post_training: grpo; reasoning: reasoning, reflection; planning_and_action: rollout; memory_and_benchmarks: memory
+- Abstract skim: Self-distillation can improve reasoning without a separately trained, more capable teacher, but its effectiveness depends on how the self-teacher gains an advantage over the student. Conditioning the teacher on reference answers or solutions can provide such an advantage, but this information may be unavailable....
+
+### 48 - StoreBench: A Live-Commerce Environment for Evaluating and Training Autonomous Operator Agents
+
+- arXiv: [2610.10942](https://arxiv.org/abs/2610.10942) | [PDF](https://arxiv.org/pdf/2610.10942) | [papers.cool](https://papers.cool/arxiv/2610.10942)
+- Authors: Daksh Raghuvanshi, Ved Vedere, Yifan Wang
+- Published: 2026-10-07 21:46 UTC | Categories: cs.AI, cs.CL, cs.LG
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, grpo; reasoning: reasoning; planning_and_action: planning; memory_and_benchmarks: benchmark, evaluation
+- Abstract skim: Reinforcement learning environments are now a primary lever for improving large language model (LLM) capabilities in post-training, yet most agentic benchmarks remain static: the world moves only when the agent acts, the reward is a terminal verdict, and the pass bar is set arbitrarily. We introduce StoreBench, a...
+
+### 47 - GRPODropout: Less is More for Online Reinforcement Learning Rollouts
+
+- arXiv: [2610.11854](https://arxiv.org/abs/2610.11854) | [PDF](https://arxiv.org/pdf/2610.11854) | [papers.cool](https://papers.cool/arxiv/2610.11854)
+- Authors: Hexuan Deng, Zihao Yan, Xuebo Liu, Shuo Nie, Yue Wang, Chen Wang, et al. (11 authors)
+- Published: 2026-10-08 12:38 UTC | Categories: cs.AI, cs.CL, cs.LG
+- Why it matched: rl_post_training: reinforcement learning, grpo; reasoning: reasoning; planning_and_action: rollout
+- Abstract skim: Reinforcement learning (RL) methods such as GRPO substantially improve large language model reasoning but often suffer from policy entropy collapse: the loss of sampling diversity weakens exploration and limits further improvement. Existing methods address this issue either through algorithm-level interventions,...
+
+### 46 - DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training
+
+- arXiv: [2610.12468](https://arxiv.org/abs/2610.12468) | [PDF](https://arxiv.org/pdf/2610.12468) | [papers.cool](https://papers.cool/arxiv/2610.12468)
+- Authors: Junyan Li, Ruizhi Li, Yu Liu, Xiangshuo Liu, Mingchao Sun, Hongyu Pan, et al. (9 authors)
+- Published: 2026-10-08 17:59 UTC | Categories: cs.RO
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, reward model; planning_and_action: world model
+- Abstract skim: We present DreamTrue, a multi-view, cross-embodiment robot world model for action-faithful and physically plausible video prediction. Training such a model on existing robot datasets faces two obstacles: imprecise calibration can impair action following, while limited coverage of unsuccessful interactions can bias...
+
+### 46 - Mental-Models for Multi-Agent Systems
+
+- arXiv: [2610.12453](https://arxiv.org/abs/2610.12453) | [PDF](https://arxiv.org/pdf/2610.12453) | [papers.cool](https://papers.cool/arxiv/2610.12453)
+- Authors: Hanan Gani, Lulu Shao, Manmohan Chandraker
+- Published: 2026-10-08 17:59 UTC | Categories: cs.MA
+- Why it matched: agentic_rl: multi-agent; rl_post_training: reward model; reasoning: reasoning; planning_and_action: decision making; memory_and_benchmarks: memory
+- Abstract skim: Large foundation models have accelerated progress toward general-purpose agents that interact with humans and other agents through language and multimodal signals. However, robust multi-agent decision-making requires reasoning about what other agents know, intend, and are likely to do under partial observability....
+
+### 46 - NavGPT-3: Harnessing Context in a Hierarchical Navigation Runtime
+
+- arXiv: [2610.10787](https://arxiv.org/abs/2610.10787) | [PDF](https://arxiv.org/pdf/2610.10787) | [papers.cool](https://papers.cool/arxiv/2610.10787)
+- Authors: Gengze Zhou, Yicong Hong, Jiazhao Zhang, Xunyi Zhao, Jian Zhou, Zixing Lei, et al. (12 authors)
+- Published: 2026-10-07 18:45 UTC | Categories: cs.AI, cs.CL, cs.LG, cs.RO
+- Why it matched: agentic_rl: agentic reinforcement learning, autonomous agent; rl_post_training: reinforcement learning; reasoning: reasoning; planning_and_action: acting; memory_and_benchmarks: evaluation
+- Abstract skim: Language models trained with long-horizon agentic reinforcement learning can generalize knowledge through reasoning, express precise actions, and pursue goals over many steps, raising the ceiling on what an embodied agent can understand and decide. Physical interaction, however, remains the domain of action...
+
+### 45 - VICO: Visual Environments Co-Evolving for Vision-Language Model Reasoning
+
+- arXiv: [2610.10782](https://arxiv.org/abs/2610.10782) | [PDF](https://arxiv.org/pdf/2610.10782) | [papers.cool](https://papers.cool/arxiv/2610.10782)
+- Authors: Meng Lu, Ligeng Zhu, Olivia Xiao, Yuchen Zhuang, Zihan Wang, Kuncheng Wu, et al. (11 authors)
+- Published: 2026-10-07 18:39 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, rlvr; reasoning: reasoning
+- Abstract skim: Reinforcement learning with verifiable rewards (RLVR) has become a standard recipe for post-training vision-language models (VLMs), but it typically assumes a static training environment. As the actor improves, fixed tasks drift out of its learning frontier: many become trivial, others remain unsolvable; and the...
+
+### 44 - VAMR: Multi-Question Agentic Reasoning for Efficient Long-Form Video Understanding
+
+- arXiv: [2610.11171](https://arxiv.org/abs/2610.11171) | [PDF](https://arxiv.org/pdf/2610.11171) | [papers.cool](https://papers.cool/arxiv/2610.11171)
+- Authors: Runquan Gui, Hanzhu Chen, Zehao Wang, Hanxin Zhu, Xin Li, Zhibo Chen
+- Published: 2026-10-08 03:26 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use; rl_post_training: policy optimization; reasoning: reasoning; planning_and_action: trajectory; memory_and_benchmarks: memory
+- Abstract skim: Long-form video understanding often involves multiple questions about different aspects of the same recording. Yet existing video agents typically process each question through an isolated tool-use trajectory. This repeatedly restarts video exploration and memory construction, missing opportunities to acquire...
+
+### 43 - Balancing Reference Guidance and Free Generation in Trajectory Rollouts for Reasoning RL
+
+- arXiv: [2610.11128](https://arxiv.org/abs/2610.11128) | [PDF](https://arxiv.org/pdf/2610.11128) | [papers.cool](https://papers.cool/arxiv/2610.11128)
+- Authors: Hanyu Wang, Nakul Agarwal, Hossein Nourkhiz Mahjoub, Ehsan Moradi Pari, Makoto Fukushima, Jinghui Chen, et al. (7 authors)
+- Published: 2026-10-08 02:54 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: policy optimization, group relative policy optimization, grpo; reasoning: reasoning; planning_and_action: trajectory
+- Abstract skim: A verified reference solution provides a correct trajectory for training a reasoning model. Alternatively, a prefix of the reference can guide the model in generating a trajectory of its own. How much reference guidance should we provide? We study this question through prefix continuation, where the model continues...
+
+### 42 - Measuring and Mitigating Solution Mode Collapse in RLVR
+
+- arXiv: [2610.11064](https://arxiv.org/abs/2610.11064) | [PDF](https://arxiv.org/pdf/2610.11064) | [papers.cool](https://papers.cool/arxiv/2610.11064)
+- Authors: Liv G. d&#x27;Aliberti, Marwa Abdulhai, Sofiia Druchyna, Peter Henderson, Manoel Horta Ribeiro
+- Published: 2026-10-08 01:25 UTC | Categories: cs.CL, cs.LG
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, rlvr; memory_and_benchmarks: benchmark
+- Abstract skim: A language model (LM) can usually answer the same question in more than one way, but reinforcement learning with verifiable rewards (RLVR) is indifferent to which correct answer a model produces. A solution will earn the same reward whether it is the thousandth copy of a familiar answer or one the model has never...
+
+### 41 - Constrained Command-Conditioned Reinforcement Learning with Bandit Strategy Selection in Real-Time Strategy Games
+
+- arXiv: [2610.11663](https://arxiv.org/abs/2610.11663) | [PDF](https://arxiv.org/pdf/2610.11663) | [papers.cool](https://papers.cool/arxiv/2610.11663)
+- Authors: Nick Leenders, Roy Lindelauf, Joost van Oijen, Boris Cule
+- Published: 2026-10-08 10:37 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, ppo; reasoning: self-play
+- Abstract skim: Deep reinforcement learning agents reach strong performance in real-time strategy games but can be brittle against opponents outside their training distribution. Separating strategic command selection from learned unit control allows different strategies to be selected for different opponents while reusing the same...
+
+### 40 - When Interfaces Speak: Data-Aware Generative UI Harness for Active Interaction
+
+- arXiv: [2610.11123](https://arxiv.org/abs/2610.11123) | [PDF](https://arxiv.org/pdf/2610.11123) | [papers.cool](https://papers.cool/arxiv/2610.11123)
+- Authors: Xiaolong Li, Xiaohan Xu, Jinyang Li, Xinnuo Xu, Ge Qu, Nan Huo, et al. (8 authors)
+- Published: 2026-10-08 02:49 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: multi-agent, tool use, agent harness; rl_post_training: reinforcement learning; memory_and_benchmarks: benchmark
+- Abstract skim: Most human-agent interaction today remains text-based. Natural language can impose cognitive overload, ambiguity, information chaos, and slow input for complex tasks; ephemeral generative UIs can present structured information and guide users toward task completion. We propose GenUI-Harness, a multi-agent harness...
+
+### 39 - Do LLMs Learn from Rewards in Context? : Rethinking the role of reward in In-Context Reinforcement Learning
+
+- arXiv: [2610.11152](https://arxiv.org/abs/2610.11152) | [PDF](https://arxiv.org/pdf/2610.11152) | [papers.cool](https://papers.cool/arxiv/2610.11152)
+- Authors: Minchan Kwon, Seunghee Koh, Sunghyun Baek, Minsung Bae, Junmo Kim
+- Published: 2026-10-08 03:15 UTC | Categories: cs.CL, cs.LG
+- Why it matched: agentic_rl: agent memory; rl_post_training: reinforcement learning; planning_and_action: trajectory; memory_and_benchmarks: memory
+- Abstract skim: LLM agents increasingly improve at inference time by accumulating experience in context rather than by updating parameters. This process is often described as in-context reinforcement learning (ICRL). Whether in-context learning (ICL) can actually play the role of RL, however, has not been tested. We study this...
+
+### 38 - When Should Agents Think? Adaptive Reasoning via Cross-Turn Estimation
+
+- arXiv: [2610.12061](https://arxiv.org/abs/2610.12061) | [PDF](https://arxiv.org/pdf/2610.12061) | [papers.cool](https://papers.cool/arxiv/2610.12061)
+- Authors: Yiruo Cheng, Shen Huang, Xiaoshuai Song, Jiejun Tan, Guanting Dong, Pengjun Xie, et al. (8 authors)
+- Published: 2026-10-08 14:43 UTC | Categories: cs.AI, cs.CL
+- Why it matched: agentic_rl: agentic reinforcement learning; rl_post_training: reinforcement learning; reasoning: reasoning; planning_and_action: trajectory
+- Abstract skim: Large language model (LLM)-based agents have demonstrated strong capabilities on complex tasks. They typically perform reasoning before each action throughout an interaction trajectory. However, reasoning may not be necessary at every turn, as reasoning produced earlier can continue to support subsequent actions. A...
+
+### 37 - Lapras: Latent Reasoning for Time Series Language Models
+
+- arXiv: [2610.11111](https://arxiv.org/abs/2610.11111) | [PDF](https://arxiv.org/pdf/2610.11111) | [papers.cool](https://papers.cool/arxiv/2610.11111)
+- Authors: Yuliang Chen, Yu Yvonne Wu, Patrick Langer, Arvind Pillai, Sudarshan Regmi, Martin Maritsch, et al. (14 authors)
+- Published: 2026-10-08 02:33 UTC | Categories: cs.CL, cs.LG
+- Why it matched: rl_post_training: post-training, post training; reasoning: reasoning, chain-of-thought, chain of thought
+- Abstract skim: Time Series Language Models (TSLMs) offer a promising path toward time series understanding by reasoning over temporal signals and producing natural language answers and explanations. A common approach is Chain-of-Thought (CoT), which generates step-by-step rationales linking relevant signal patterns to final...
+
+### 37 - Recurrent Self-Improvement: Dynamic Cross-Loop On-Policy Distillation for Looped Language Models
+
+- arXiv: [2610.10623](https://arxiv.org/abs/2610.10623) | [PDF](https://arxiv.org/pdf/2610.10623) | [papers.cool](https://papers.cool/arxiv/2610.10623)
+- Authors: Yi Wang, Rui Qian, Yu Li, Haoyang Yao, Wenjie Wang
+- Published: 2026-10-07 08:54 UTC | Categories: cs.CL, cs.LG
+- Why it matched: rl_post_training: post-training, post training; reasoning: reasoning, self-improvement, self improvement
+- Abstract skim: Looped Language Models (LoopLMs) offer a parameter efficient approach to scaling reasoning by reusing shared parameters across recurrent computation steps. Despite their promise, effective post-training of LoopLMs remains challenging. Existing approaches either provide reward based supervision that is sparse or...
+
+### 35 - Language Models as AI Research World Models
+
+- arXiv: [2610.12235](https://arxiv.org/abs/2610.12235) | [PDF](https://arxiv.org/pdf/2610.12235) | [papers.cool](https://papers.cool/arxiv/2610.12235)
+- Authors: Zijun Wang, Zewen Liu, Minhua Lin, Zhaotian Weng, Zhan Shi, Bing He, et al. (13 authors)
+- Published: 2026-10-08 16:18 UTC | Categories: cs.CL
+- Why it matched: rl_post_training: post-training, post training; reasoning: reasoning, self-improvement, self improvement; memory_and_benchmarks: evaluation
+- Abstract skim: AI research agents automate the cycle of proposing, implementing, and evaluating experiments, opening a path toward recursive self-improvement. Yet their ability to propose experiments outpaces their capacity to execute them in real environments, making outcome prediction a key capability for sustained self-...
+
+### 34 - SAIL: Scientific Agentic Intelligence via a Science-Aware Loop
+
+- arXiv: [2610.11451](https://arxiv.org/abs/2610.11451) | [PDF](https://arxiv.org/pdf/2610.11451) | [papers.cool](https://papers.cool/arxiv/2610.11451)
+- Authors: SAIL Model Team, Boyuan Sun, Bryan Dai, Che Liu, Chi Liu, Derek Li, et al. (12 authors)
+- Published: 2026-10-08 08:04 UTC | Categories: cs.CL
+- Why it matched: agentic_rl: agentic reinforcement learning; rl_post_training: reinforcement learning; reasoning: reasoning; planning_and_action: planning
+- Abstract skim: We introduce SAIL, an open model with 35B total and 3B active parameters for literature research, scientific coding, and multi-step research workflows. SAIL is developed through a science-aware improvement loop: agents built on frontier AI models analyze its task failures and construct training tasks that address...
+
+### 33 - KDFP: A first-principles approach to knowledge distillation in large language models
+
+- arXiv: [2610.10854](https://arxiv.org/abs/2610.10854) | [PDF](https://arxiv.org/pdf/2610.10854) | [papers.cool](https://papers.cool/arxiv/2610.10854)
+- Authors: Ryan Swift, Konstantinos Psounis
+- Published: 2026-10-07 19:59 UTC | Categories: cs.LG
+- Why it matched: rl_post_training: post-training, post training; reasoning: reasoning, chain-of-thought, chain of thought
+- Abstract skim: Knowledge distillation is an established technique for improving the capabilities of small, efficient student models by training them with the representations of larger, more capable teacher models. Much of the recent work in the distillation of large language models (LLMs) has focused on distilling abilities...
+
+### 32 - Beyond Speech Captions: Speech-Rewarded Style Planning for Conversational Text-to-Speech
+
+- arXiv: [2610.11461](https://arxiv.org/abs/2610.11461) | [PDF](https://arxiv.org/pdf/2610.11461) | [papers.cool](https://papers.cool/arxiv/2610.11461)
+- Authors: Shiao Zhu, Lianbo Liu, Sizhen Lyu, Yuzhe Wang, Sheng Li, Takahiro Shinozaki
+- Published: 2026-10-08 08:12 UTC | Categories: cs.CL
+- Why it matched: rl_post_training: policy optimization, group relative policy optimization, grpo; planning_and_action: planning; memory_and_benchmarks: evaluation
+- Abstract skim: Natural-language style descriptions provide an interpretable interface between large language models (LLMs) and controllable text-to-speech (TTS). However, using descriptions as pseudo-labels compresses target acoustics into text, and descriptive fidelity need not imply effective control of a particular synthesizer....
+
+## Tuning Notes
+
+- Edit `paper_bot/config.json` to add or remove tracked arXiv categories and keyword groups.
+- Good next filters to add: preferred labs/authors, exclude applied domains, or separate lists for theory RL vs LLM post-training.
+</pre></main></body></html>
