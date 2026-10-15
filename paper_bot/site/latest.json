@@ -11171,36 +11171,6 @@
       "reason": "planning_and_action: planning, trajectory; memory_and_benchmarks: memory, evaluation"
     },
     {
-      "score": 13,
-      "arxiv_id": "2610.14106",
-      "title": "Embodied Zero-Shot Task Planning via Hardware-Aware LLM-VLM Integration for Grounded Robotic Manipulation",
-      "authors": [
-        "Lonnie Tankersley",
-        "Noorbakhsh Amiri Golilarz",
-        "Soroush Korivand"
-      ],
-      "summary": "Large language models can translate natural-language instructions into plausible manipulation plans, but robotic execution requires physically grounded decisions that respect robot embodiment, workspace geometry, reachability, collision constraints, and grasp feasibility. This paper presents a hardware-aware large language model-vision-language model (LLM-VLM) manipulation framework for a simulated Franka Research 3 robot in NVIDIA Isaac Sim. The framework separates symbolic reasoning from metric execution: an API-hosted LLM planner receives a structured scene summary and generates only symbolic task information, including the object to manipulate, target relation, approach preference, and objects to avoid. A local Qwen3-VL 8B VLM verifier supports semantic confirmation of ambiguous objects and open-container surrogates. Both the LLM planner and the VLM verifier are prohibited from generating robot coordinates, grasp poses, keepout dimensions, gripper commands, trajectory waypoints, or success labels. Instead, these decisions are handled by deterministic grounding and execution modules that use the robot model, scene geometry, MoveIt 2 collision checking, inverse kinematics, grasp validation, release verification, and final visual assessment. Execution feedback is returned only as symbolic context for replanning. The framework is evaluated through simulated digital-twin trials involving pickup, occluded-source access, keepout reasoning, relation placement, and sequential manipulation tasks.",
-      "updated": "2026-10-08T22:59:11+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.RO"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14106",
-      "pdf_url": "https://arxiv.org/pdf/2610.14106",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14106",
-      "matched": {
-        "reasoning": [
-          "reasoning"
-        ],
-        "planning_and_action": [
-          "planning",
-          "trajectory"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "reasoning: reasoning; planning_and_action: planning, trajectory"
-    },
-    {
       "score": 12,
       "arxiv_id": "2610.18842",
       "title": "Who Improves the Robot? Toward Physical Recursive Self-Improvement",
@@ -15975,35 +15945,6 @@
       },
       "negative_matches": [],
       "reason": "rl_post_training: reinforcement learning"
-    },
-    {
-      "score": 8,
-      "arxiv_id": "2610.14073",
-      "title": "Is the Future Predictable? Modeling Future Predictability for Reliable Temporal Reasoning",
-      "authors": [
-        "Yongyi Huang",
-        "Huaping Zhang",
-        "Wenyao Cui",
-        "Qiuchi Li",
-        "Lei Li",
-        "Baohua Zhang"
-      ],
-      "summary": "Large language models (LLMs) remain unreliable when reasoning about the future. Existing models often overlook the difference among future states, committing to specific answers even when the queried facts are inherently volatile. To capture this challenge, we introduce ChronoRegime, a future-oriented temporal reasoning task that requires models to determine whether historical temporal evidence justifies commitment to a future answer. Furthermore, we propose Confidence-Aware Temporal Reasoning (CTR), a framework that estimates future predictability from temporal dynamics and regulates answer commitment accordingly. Rather than performing unconditional forecasting, CTR commits only when the reconstructed evidence supports the target future state. Across multiple LLMs, CTR improves strict overall accuracy by 6.7 percentage points and reduces hallucination rates by 18.4 percentage points on average over the plain QA baseline. These results demonstrate that explicit predictability assessment is an effective mechanism for safer and more reliable temporal reasoning under future uncertainty.",
-      "updated": "2026-10-08T03:46:15+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14073",
-      "pdf_url": "https://arxiv.org/pdf/2610.14073",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14073",
-      "matched": {
-        "reasoning": [
-          "reasoning"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "reasoning: reasoning"
     },
     {
       "score": 7,
@@ -23462,31 +23403,6 @@
       "reason": "reasoning: reasoning"
     },
     {
-      "score": 4,
-      "arxiv_id": "2610.14077",
-      "title": "Two-Stage Multi-modal Learning for Dynamic Audio-Visual Navigation: From Physical Alignment to Scene Aggregation",
-      "authors": [
-        "Jia Li",
-        "Yinfeng Yu"
-      ],
-      "summary": "Embodied Audio-Visual Navigation (AVN) requires an agent to locate sound targets by jointly leveraging visual and auditory cues. While prior work has achieved notable success with static sound sources, real-world scenarios often involve moving targets, giving rise to the more challenging problem of \\textbf{Dynamic Audio-Visual Navigation (D-AVN)}. Existing approaches largely rely on semantic auditory features, which limits generalization to unheard sound categories and hinders fine-grained spatial reasoning. To address these challenges, we propose a novel \\textbf{Two-Stage Multi-modal Learning} framework for D-AVN. In the Physical Alignment stage, the proposed \\textbf{Intensity-Calibrated Geometry Encoder (ICGE)} performs physics-informed alignment of sound intensity with visual geometry to capture category-agnostic spatial correspondence. In the Scene Aggregation stage, a Transformer-based \\textbf{Cross-Modal Scene Aggregator (CMSA)} dynamically integrates multi-modal features to construct a robust state representation for policy learning. Extensive experiments on Replica and Matterport3D demonstrate that our method achieves state-of-the-art success rates, while significantly improving generalization and navigation efficiency in complex environments and under unheard sound scenarios.",
-      "updated": "2026-10-08T10:29:07+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.RO"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14077",
-      "pdf_url": "https://arxiv.org/pdf/2610.14077",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14077",
-      "matched": {
-        "reasoning": [
-          "reasoning"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "reasoning: reasoning"
-    },
-    {
       "score": 3,
       "arxiv_id": "2610.18852",
       "title": "ForceWAM: Decoupling Future and Response Learning from Demo and Play Data for Contact-Rich Manipulation",
@@ -25700,32 +25616,6 @@
       "arxiv_url": "https://arxiv.org/abs/2610.14184",
       "pdf_url": "https://arxiv.org/pdf/2610.14184",
       "papers_cool_url": "https://papers.cool/arxiv/2610.14184",
-      "matched": {
-        "planning_and_action": [
-          "trajectory"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "planning_and_action: trajectory"
-    },
-    {
-      "score": 3,
-      "arxiv_id": "2610.14090",
-      "title": "When pose graphs are not enough: a failure analysis of pose-graph-based camera estimation for Gaussian splatting",
-      "authors": [
-        "Senthil Palanisamy",
-        "Azwad Sabik",
-        "Alan Dolhasz",
-        "Mira Slavcheva"
-      ],
-      "summary": "Exterior Gaussian-splat twins for real-estate listings are captured to a fixed recipe: a consumer drone orbits a single property in several overlapping passes at stepped altitudes, with occasional vertical ascents, so the imagery is dense, sequential, GPS- and time-tagged, and revisits each facade from many angles. This structure is tantalizing: it suggests camera poses could be recovered by a dense pose-graph optimization (PGO) whose only unknowns are the poses, far fewer than the joint pose-and-point problem bundle adjustment (BA) solves. PGO is mature in robotics, but almost always as post-processing: it redistributes the drift of an already-decent trajectory once loop closures tie it together. Splatting captures push that regime to its limit, every frame closing loops with dozens of others, raising a clean question: does pose-only optimization reach BA accuracy? We built a system specialized to this capture structure, not a general-purpose SfM tool, to test it. It beat COLMAP on speed but never on quality; this paper is the candid post-mortem. The shortfall arises from several interacting causes, hand-set weights, greedy merging and a noisy GPS ruler, together with two limits inherent to the formulation: SE(3) edges carry no scale degree of freedom, so independently scaled sub-maps drift when merged, and a two-view edge stops short of the coupling one 3D point imposes on every frame that sees it. A viable design must add back Sim(3) constraints, absolute GPS priors, retained structure, and uncertainty-aware weighting",
-      "updated": "2026-10-08T17:55:16+00:00",
-      "categories": [
-        "cs.RO"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14090",
-      "pdf_url": "https://arxiv.org/pdf/2610.14090",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14090",
       "matched": {
         "planning_and_action": [
           "trajectory"
@@ -31599,87 +31489,6 @@
       },
       "negative_matches": [],
       "reason": "memory_and_benchmarks: evaluation"
-    },
-    {
-      "score": 2,
-      "arxiv_id": "2610.14093",
-      "title": "Human Pose Estimation by Probabilistic Mixtures of Gaussian and Uniform Distributions",
-      "authors": [
-        "Santiago Reina Alguacil",
-        "Ezequiel López Rubio"
-      ],
-      "summary": "Despite advancements in sub-pixel decoding, modern Human Pose Estimation (HPE) architectures remain constrained by deterministic coordinate extraction from discrete heatmaps, which systematically fails under dense occlusions and Out-of-Distribution (OoD) ambiguities. To address these limitations, we propose a post-hoc continuous probabilistic framework that intercepts raw heatmaps and models them as a Gaussian Mixture Model (GMM) augmented with a spatially agnostic uniform distribution, requiring no architectural modifications or retraining. This continuous representation allows us to comprehensively explore the distinct contributions of density modeling to HPE. We show that the spatial expectation of our fitted GMM achieves precision parity with leading sub-pixel decoders without heuristic post-processing. Leveraging this continuous space, our test-time augmentation aggregates probability distributions rather than discrete activations, mitigating multi-scale heatmap poisoning. Furthermore, because our multimodal GMM parameterization isolates competing spatial hypotheses, it naturally interfaces with geometric regularizers such as Markov Random Fields. However, our analysis exposes the inherent vulnerabilities of 2D kinematic priors under perspective foreshortening and visual degradation. Crucially, this density formulation yields significant improvements in uncertainty quantification: our calibrated geometric covariance volume outperforms standard peak-intensity heuristics in OoD anomaly detection under severe occlusion. For in-distribution calibration, dynamically fusing our geometric metric via Adaptive Softmax reduces or matches baseline Area Under the Sparsification Error (AUSE) across benchmarks and degradation levels. Finally, we establish that this continuous parameterization is extensible to multi-view 3D architectures, bypassing the $\\mathcal{O}(N^3)$ voxel memory bottleneck.",
-      "updated": "2026-10-08T18:12:32+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14093",
-      "pdf_url": "https://arxiv.org/pdf/2610.14093",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14093",
-      "matched": {
-        "memory_and_benchmarks": [
-          "memory"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "memory_and_benchmarks: memory"
-    },
-    {
-      "score": 2,
-      "arxiv_id": "2610.14089",
-      "title": "SAGE: Efficient Protected Vision-Language Inference on Smart Glasses",
-      "authors": [
-        "Zhimin Li",
-        "Pan Wang",
-        "Jingxian Chen",
-        "Yuantao Tang",
-        "Qian Lou",
-        "Jingtong Hu"
-      ],
-      "summary": "Smart glasses are a promising platform for vision-language assistants, but private split inference remains expensive: protecting visual representations before transmission does not remove the cost of on-device vision encoding, wide protected tokens, or hardware-unaware execution. We present SAGE (Smart-glasses-Aware Guarded Encoding), a hardware-aware framework for efficient protected VLM inference on smart glasses. SAGE keeps raw images and unprotected visual tokens on the trusted device, reduces visual input cost, executes shape-specialized INT8 graphs, and compresses protected representations into compact 256-dimensional INT8 packets before transmission. Unlike efficiency methods optimized only for nominal model size, SAGE selects its operating point using downstream answer quality together with measured latency, memory, and thermal behavior on real Mentra Live glasses. On a matched Qwen workload, SAGE reduces glasses inference latency by 39.18%, device-sensor temperature rise by 21.91%, and protected packet size by 96.56%, while retaining 85.62% of the protected reference's relaxed utility and comparable prompted containment. Direct glasses-to-phone tests deliver all 192 packets and reduce median packet-plus-acknowledgment time from 71.3 to 10.0 ms. The compact protected interface also transfers across four additional VLM families. These results show that private wearable VLM inference must be optimized jointly across representation protection, communication, and real-device execution rather than through model compression alone.",
-      "updated": "2026-10-08T17:36:14+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14089",
-      "pdf_url": "https://arxiv.org/pdf/2610.14089",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14089",
-      "matched": {
-        "memory_and_benchmarks": [
-          "memory"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "memory_and_benchmarks: memory"
-    },
-    {
-      "score": 2,
-      "arxiv_id": "2610.14082",
-      "title": "SenseWeather: Multimodal Sensing for Robust Robotic Perception under Extreme Conditions",
-      "authors": [
-        "Fucai Ke",
-        "Sukai Huang",
-        "Junyi Hao",
-        "Kal Backman",
-        "Naim Rastgoo",
-        "Gholamreza Haffari",
-        "Hamid Rezatofighi"
-      ],
-      "summary": "Robotic perception must remain reliable when extreme environmental conditions severely degrade the primary RGB observation. Although robotic platforms commonly carry complementary sensors such as depth and infrared, much of the modern perception stack remains RGB-centric, creating a mismatch between multimodal onboard sensing and pretrained downstream models. We study whether complementary sensing can be used upstream to recover a task-compatible RGB observation that preserves existing perception capabilities without modifying or retraining the downstream stack. To this end, we introduce SenseWeather, a controlled multimodal benchmark for robotic perception under severe rain, snow, dust, fog, and darkness, with registered RGB, depth, and infrared observations, clean references, and grounded high-level perception tasks. We further develop Fusion-to-RGB, with two parameter-efficient sensor-fusion realizations based on token-space fusion for a diffusion transformer and residual latent conditioning for an inpainting UNet. Across frozen open-vocabulary grounding and vision-language models, RGB+D+IR fusion improves all paired downstream comparisons over the corresponding RGB-only restorers, including AP50 gains across all ten detector comparisons. Importantly, these perception gains do not consistently follow conventional image-fidelity metrics, and increasing weather severity does not induce monotonic downstream degradation. These results show that complementary sensing can preserve reusable robotic perception under extreme conditions, while highlighting task-level perception robustness as an objective distinct from visual restoration quality.",
-      "updated": "2026-10-08T12:56:42+00:00",
-      "categories": [
-        "cs.RO"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14082",
-      "pdf_url": "https://arxiv.org/pdf/2610.14082",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14082",
-      "matched": {
-        "memory_and_benchmarks": [
-          "benchmark"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "memory_and_benchmarks: benchmark"
     },
     {
       "score": 1,
@@ -48931,142 +48740,6 @@
       "arxiv_url": "https://arxiv.org/abs/2610.14115",
       "pdf_url": "https://arxiv.org/pdf/2610.14115",
       "papers_cool_url": "https://papers.cool/arxiv/2610.14115",
-      "matched": {},
-      "negative_matches": [],
-      "reason": "No configured keywords matched."
-    },
-    {
-      "score": 0,
-      "arxiv_id": "2610.14101",
-      "title": "Fin_Agent at FinEval 2026: Task-Aware Methods for Multilingual Financial NLP",
-      "authors": [
-        "Mohotarema Rashid",
-        "Tanzina Hossain",
-        "Xiaoying Song",
-        "Lingzi Hong"
-      ],
-      "summary": "We present Fin_Agent, our submission to the FinEval 2026 shared task on multilingual fi nancial language understanding. Our sys tems address Greek financial named-entity recognition, Japanese implicit communication recognition, and multilingual financial ques tion answering. For Greek NER, we com bine annotation-aware numeric rules with zero shot Qwen2.5-32B classification, achieving 0.9521 public F1 and 0.8884 private F1. For Japanese implicit communication, an inter pretable cue-based ordinal scorer achieves 98.0% test accuracy. For multilingual financial QA, BGE-M3retrieval with Qwen3-32B gen eration achieves 0.3023 and 0.3419 ROUGE-1 F1 on the public and private splits. Key limita tions include dataset-specific rules, handcrafted cues, and limited supervision. Implementa tion code is available https://github.com/ Rashidnira/finagent-fineval-2026.",
-      "updated": "2026-10-08T20:14:27+00:00",
-      "categories": [
-        "cs.CL"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14101",
-      "pdf_url": "https://arxiv.org/pdf/2610.14101",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14101",
-      "matched": {},
-      "negative_matches": [],
-      "reason": "No configured keywords matched."
-    },
-    {
-      "score": 0,
-      "arxiv_id": "2610.14098",
-      "title": "From Prototype to Massing: Learning Graph Correspondence for Scalable Facade Modeling",
-      "authors": [
-        "Yiliang Shao"
-      ],
-      "summary": "Facade articulation at building scale is usually resolved manually or through parametric systems that encode design intent as explicit rules. This paper investigates a complementary workflow in which a designer-authored prototype supplies transferable articulation logic. Prototype and target massing are represented as heterogeneous attributed graphs, and a Siamese graph attention network with instance-local triplet supervision embeds their segments in a shared metric space. Many-to-one nearest-neighbor retrieval then routes prototype Patterns to the larger target. On the original 85/15 within-corpus holdout, prototype-to-massing top-1 accuracy reached 96.5%, compared with a reported 76.5% raw-feature baseline. A Rhino demonstrator converts predicted correspondence into reusable facade Patterns, and qualitative applications on four built projects show the workflow across distinct massing organizations. The contribution is not automated facade generation, but an authoring model in which resolved geometry serves as a computational specification for project-scale propagation.",
-      "updated": "2026-10-08T19:33:35+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14098",
-      "pdf_url": "https://arxiv.org/pdf/2610.14098",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14098",
-      "matched": {},
-      "negative_matches": [],
-      "reason": "No configured keywords matched."
-    },
-    {
-      "score": 0,
-      "arxiv_id": "2610.14097",
-      "title": "A Physics-Informed Hybrid Forward-Inverse Machine Learning Framework for High-Dimensional Sparse Recipe Reconstruction",
-      "authors": [
-        "Md. Muqtadir Fuad",
-        "Md. Istiak Adnan",
-        "Ridwan Al Aziz"
-      ],
-      "summary": "High-dimensional sparse recipe formulation in process industries involves nonlinear association of various covariates, bounded by sparsity constraints and multi-criteria tolerances. Traditional physics-based classical methods (such as Kubelka-Munk) fail to generate sparse candidate recipes properly due to their simplified assumptions and industrial process variations. This study proposes a hybrid physics-informed uncertainty-aware framework that is structured into three modules: (a) Module A, a multi-target forward quality model; (b) Module B, a sparse inverse reconstructor; and (c) Module C, a feasibility-constrained ranking layer. Then it has been validated in an industrial textile dyeing context with recipe-grouped cross-validation under multi-illuminant quality assessment comprising process and production information, target reflectance, K/S values, and spectral descriptors. Histogram Gradient Boosting (HGB) with spectral-only features ($R_λ$, K/S) and Gradient Boosting Regressor (GBDT) with recipe-process features outperforms other configurations with out-of-Fold MAE of 0.1655 and 0.1523 in the forward quality model. For inverse reconstruction, a component-wise median blend achieved a recipe-vector MAE of 0.0295. Exploratory conditional treatment effect (CATE) suggests an observational association that alkali adjustment reduces error for red and pale shades (CATE = -0.196). This framework provides a human-in-the-loop decision-support tool that minimizes costly laboratory trials across industrial formulation domains.",
-      "updated": "2026-10-08T19:25:05+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14097",
-      "pdf_url": "https://arxiv.org/pdf/2610.14097",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14097",
-      "matched": {},
-      "negative_matches": [],
-      "reason": "No configured keywords matched."
-    },
-    {
-      "score": 0,
-      "arxiv_id": "2610.14091",
-      "title": "Pristine Models",
-      "authors": [
-        "Anirudh Sundara Rajan",
-        "Krishna Kumar Singh",
-        "Richard Zhang",
-        "Yong Jae Lee"
-      ],
-      "summary": "Training on broad, unfiltered data enables high-quality image generation, but can also teach models concepts that should not be generated; restricting the training data ensures safety, but reduces quality because examples containing unsafe concepts also provide useful knowledge that is not itself unsafe. Existing approaches largely address this trade-off post hoc through concept unlearning, which can lead to catastrophic forgetting as the number of concepts to remove grows. We instead ask whether unsafe concept knowledge can be compartmentalized during pretraining so that access to it can be disabled at inference. We introduce Pristine Models, a novel text-to-image generation architecture with an attention mechanism that encourages the separation of safe and unsafe knowledge into independently parameterized branches. The branch-specific parameters are learned during training, while the unsafe branch can be detached at inference. On ImageNet, Pristine Models enable safer generation while retaining much of the utility of full-data pretraining, achieving higher image quality and better text alignment than training only on safe data or applying post-hoc concept removal. We further scale our approach to CC12M, demonstrating that it remains effective in a substantially larger and more diverse open-world pretraining setting.",
-      "updated": "2026-10-08T17:58:41+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14091",
-      "pdf_url": "https://arxiv.org/pdf/2610.14091",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14091",
-      "matched": {},
-      "negative_matches": [],
-      "reason": "No configured keywords matched."
-    },
-    {
-      "score": 0,
-      "arxiv_id": "2610.14075",
-      "title": "Assessing the Marginal Utility of Exocentric Head Views in UMI-Style Large-FoV Wrist-Camera Manipulation",
-      "authors": [
-        "Yuhui Duan",
-        "Shi Jin",
-        "Yuntian Wang",
-        "Jin Wang",
-        "Siao Liu",
-        "Wenchang Gao",
-        "Zhaxizhuoma",
-        "Yan Ding"
-      ],
-      "summary": "Multi-view perception is often treated as a safe design choice for robot manipulation: if one camera is useful, more cameras should be better. We revisit that assumption in tabletop bimanual manipulation by comparing policies trained with two large-field-of-view (FoV) wrist cameras against policies that additionally receive a head view, using controlled-variable experiments on a real bimanual platform. Across three tabletop tasks, adding a head view does not consistently improve task completion or execution quality: when the wrist cameras already observe the objects, grippers, and goal regions, wrist-only policies form a strong baseline. Restricting the wrist-camera FoV increases the potential value of a head view, but performance improves most reliably when the added view supplies concentrated, task-relevant information: region-of-interest (ROI) cropping yields more consistent head-view gains than the uncropped image, which is dominated by background and task-irrelevant regions. The data-scaling results further suggest an interaction between FoV and demonstration count: wide observations improve coverage but may require more data to stabilize, and they may reach a higher performance ceiling once enough demonstrations are available. These results suggest that camera design should be framed as a task-relevance and information-density problem rather than as a simple count of input views.",
-      "updated": "2026-10-08T06:26:51+00:00",
-      "categories": [
-        "cs.RO"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14075",
-      "pdf_url": "https://arxiv.org/pdf/2610.14075",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14075",
-      "matched": {},
-      "negative_matches": [],
-      "reason": "No configured keywords matched."
-    },
-    {
-      "score": 0,
-      "arxiv_id": "2610.14074",
-      "title": "One Model, Multiple Compute Budgets: Multi-Ratio ConceptMoE for Flexible Compute Across Turns",
-      "authors": [
-        "Yiyang Fu",
-        "Zihao Huang",
-        "Dongchen Han",
-        "Shukai Gong",
-        "Zhen Dong",
-        "Qiyang Min",
-        "Daquan Zhou"
-      ],
-      "summary": "Large language models typically support different inference budgets through separate model sizes or fixed compute configurations. In multi-turn interactions, however, compute demand can vary substantially across turns. Using a high-compute model for every turn wastes computation, while routing among independent models may require rebuilding model-specific history states after switches. We therefore ask whether a single shared model can support multiple compute budgets that can be flexibly assigned across turns. We introduce Multi-Ratio ConceptMoE, which jointly supports token-to-concept compression ratios of 2, 4, and 8 (CR2/CR4/CR8) within a shared backbone. Lightweight full-token modules reduce compression-independent cost, ratio-specific boundary routers support distinct compression levels, and cross-ratio training enables mixed-ratio processing within the same context. Across PTBench and SFTBench, the three fixed modes outperform their compute-matched MoE baselines in all 6 comparisons while remaining competitive with independently trained fixed-ratio specialists. On CodeChat and CoSQL, mixed-ratio inference improves the accuracy--compute trade-off, outperforming the Large MoE by 5.87 and 2.68 percentage points while reducing FLOPs by 41.1% and 12.3%, respectively. Under the same turn-wise budget schedule, Multi-Ratio ConceptMoE further reduces FLOPs by 78.4% and 46.9% relative to routing among independent models. These results demonstrate that a single shared model can provide multiple compute budgets for flexible compute allocation across turns.",
-      "updated": "2026-10-08T03:56:34+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.14074",
-      "pdf_url": "https://arxiv.org/pdf/2610.14074",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.14074",
       "matched": {},
       "negative_matches": [],
       "reason": "No configured keywords matched."
