@@ -1,0 +1,211 @@
+# RL / Post-Training / Agentic RL Reading Queue - 2026-10-16
+
+Source: papers.cool Atom feeds for cs.AI, cs.CL, cs.LG, cs.RO, cs.MA.
+Window: last 7 day(s). Candidates fetched in window: 618. Minimum score: 8.
+
+## Top Picks
+
+### 69 - ReFlow: Replay-Driven Decoupling for Efficient RL Post-Training
+
+- arXiv: [2610.21640](https://arxiv.org/abs/2610.21640) | [PDF](https://arxiv.org/pdf/2610.21640) | [papers.cool](https://papers.cool/arxiv/2610.21640)
+- Authors: Yukun Tian, Junwei Su, Haofeng Xu, Lansong Diao, Zhengping Qian, Weibo Zhao, et al. (9 authors)
+- Published: 2026-10-15 10:21 UTC | Categories: cs.LG
+- Why it matched: agentic_rl: agentic rl; rl_post_training: post-training, post training, reinforcement learning, policy optimization; reasoning: reasoning; planning_and_action: trajectory, rollout
+- Abstract skim: Reinforcement learning (RL) has been a critical paradigm for improving large language model (LLM) reasoning and agentic capabilities, but its efficiency remains a major bottleneck. Existing RL systems commonly rely on asynchronous execution to overlap rollout generation with policy optimization for enhanced...
+
+### 64 - Learning to Steer LLM Agents and Multi-Agent Systems
+
+- arXiv: [2610.22316](https://arxiv.org/abs/2610.22316) | [PDF](https://arxiv.org/pdf/2610.22316) | [papers.cool](https://papers.cool/arxiv/2610.22316)
+- Authors: Leyang Shen, Yaxin Gong, Yang Zhang, Chenxiao Fan, Jiakai Wang, Dong Wang, et al. (10 authors)
+- Published: 2026-10-15 17:51 UTC | Categories: cs.AI, cs.LG, cs.MA
+- Why it matched: agentic_rl: multi-agent, tool use, agent collaboration; rl_post_training: reinforcement learning, policy optimization, group relative policy optimization, grpo
+- Abstract skim: Large language model (LLM)-based agents and multi-agent systems increasingly tackle complex tasks through long-horizon tool use and inter-agent collaboration. However, these systems are prone to deviating from the overall goal as execution unfolds, which wastes execution resources and leads to undesired outcomes, a...
+
+### 55 - Enhancing Multimodal RLVR with Pairwise Token Contrast and Adaptive Trajectory Confidence
+
+- arXiv: [2610.21671](https://arxiv.org/abs/2610.21671) | [PDF](https://arxiv.org/pdf/2610.21671) | [papers.cool](https://papers.cool/arxiv/2610.21671)
+- Authors: Yiran Zhang, Hanbo Huang, Jielan Li, Zhen Zhao, Shiyu Liang, Hongxia Hao
+- Published: 2026-10-15 10:55 UTC | Categories: cs.CL
+- Why it matched: rl_post_training: reinforcement learning, rlvr, policy optimization, group relative policy optimization; reasoning: reasoning; planning_and_action: trajectory
+- Abstract skim: Reinforcement learning with verifiable rewards (RLVR) improves multimodal reasoning, but group-relative policy optimization broadcasts a single sequence-level advantage to every token of a response, although errors usually localize to a few decisive steps. Recent self-distilled variants refine credit with a teacher...
+
+### 52 - Reinforcement Learning-driven Diffusion Models: Language, Vision, and Beyond
+
+- arXiv: [2610.21539](https://arxiv.org/abs/2610.21539) | [PDF](https://arxiv.org/pdf/2610.21539) | [papers.cool](https://papers.cool/arxiv/2610.21539)
+- Authors: Zhiyuan Ma, Jiabao Wei, Tianyu Wang, Hanqing Wang, Jiadong Pan, Haowen Xu, et al. (24 authors)
+- Published: 2026-10-15 09:05 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, rlhf; reasoning: reasoning; planning_and_action: trajectory
+- Abstract skim: Diffusion models (DMs) have steadily demonstrated outstanding performance in high-fidelity, controllable generation across diverse scenarios, following the "pretraining-finetuning" paradigm established in LLMs. Despite these advances, conventional DMs still face critical limitations in sophisticated reasoning,...
+
+### 52 - MemComposer: Learning to Assemble Memories for LLM Agents via Reinforcement Learning
+
+- arXiv: [2610.21091](https://arxiv.org/abs/2610.21091) | [PDF](https://arxiv.org/pdf/2610.21091) | [papers.cool](https://papers.cool/arxiv/2610.21091)
+- Authors: Yixuan Xie, Xueqiang Xu, Xinyi Fan, Xinxi Lyu, Tao Feng, Xing Fan, et al. (11 authors)
+- Published: 2026-10-15 01:47 UTC | Categories: cs.AI, cs.CL
+- Why it matched: agentic_rl: agent memory; rl_post_training: reinforcement learning, policy optimization, grpo; memory_and_benchmarks: memory
+- Abstract skim: Agent memory enables large language model (LLM) agents to reuse past experiences without updating their parameters. However, semantic similarity alone does not guarantee memory usefulness: downstream performance depends on how memories are selected and presented to the agent. We propose MemComposer, a memory...
+
+### 48 - All-in-One Memory: Process-Rewarded Reinforcement Learning for Memory Agents
+
+- arXiv: [2610.21147](https://arxiv.org/abs/2610.21147) | [PDF](https://arxiv.org/pdf/2610.21147) | [papers.cool](https://papers.cool/arxiv/2610.21147)
+- Authors: Bingbing Wang, Jingjie Lin, Weiming Qiao, Jing Li, Ruifeng Xu
+- Published: 2026-10-15 03:02 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: reinforcement learning, reward model, dpo; reasoning: process reward; planning_and_action: trajectory; memory_and_benchmarks: memory
+- Abstract skim: Large language models increasingly rely on external memory to answer queries grounded in long-horizon histories such as multi-session dialogues and lengthy documents. However, existing memory methods often optimize retrieval and memory construction separately, without a shared reward space for evaluating search,...
+
+### 46 - MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering
+
+- arXiv: [2610.22344](https://arxiv.org/abs/2610.22344) | [PDF](https://arxiv.org/pdf/2610.22344) | [papers.cool](https://papers.cool/arxiv/2610.22344)
+- Authors: Shangheng Du, Jinxin Shi, Shuaiyu Zhang, Yiming Wu, Junpeng Zhao, Shiyang Feng, et al. (10 authors)
+- Published: 2026-10-15 17:56 UTC | Categories: cs.AI, cs.CL, cs.LG
+- Why it matched: agentic_rl: tool use; rl_post_training: post-training, post training; reasoning: self-improvement, self improvement; planning_and_action: trajectory
+- Abstract skim: Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) systems provide a practical path...
+
+### 46 - KnowGPO: Knowledge-Grouped Policy Optimization for Search Agents
+
+- arXiv: [2610.22331](https://arxiv.org/abs/2610.22331) | [PDF](https://arxiv.org/pdf/2610.22331) | [papers.cool](https://papers.cool/arxiv/2610.22331)
+- Authors: Siqi Chen, Zhengxi Lu, Yuchen Yan, Xingyu Wu, Qipeng Chen, Xin Zhang, et al. (13 authors)
+- Published: 2026-10-15 17:52 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, grpo; reasoning: process reward; planning_and_action: trajectory; memory_and_benchmarks: gaia
+- Abstract skim: Deep search agents solve knowledge-intensive tasks through long-horizon, multi-turn interactions, where assigning credit to individual search decisions is fundamentally difficult. Outcome-based reinforcement learning provides only a single terminal reward shared across an entire trajectory. Recent process-...
+
+### 46 - Athanor: An Agent-Native System for Autonomous Post-Training Research
+
+- arXiv: [2610.21055](https://arxiv.org/abs/2610.21055) | [PDF](https://arxiv.org/pdf/2610.21055) | [papers.cool](https://papers.cool/arxiv/2610.21055)
+- Authors: Yufa Zhou, Yichen Wang, Jiakun Fan, Ziqi Shu, Zhichao Liu, Anru R. Zhang, et al. (8 authors)
+- Published: 2026-10-15 00:56 UTC | Categories: cs.AI, cs.CL, cs.LG, cs.MA
+- Why it matched: rl_post_training: post-training, post training; reasoning: reasoning, self-improvement, self improvement; planning_and_action: rollout; memory_and_benchmarks: evaluation
+- Abstract skim: Recursive self-improvement, in which AI systems build stronger AI systems, is one promising route to superintelligence. We study a weaker form that can be measured today: frontier agents post-training a small raw base model with public data, as a test of their research potential. We build Athanor, an open agent-...
+
+### 45 - Mosaic: Multi-Session Agentic Reinforcement Learning
+
+- arXiv: [2610.22174](https://arxiv.org/abs/2610.22174) | [PDF](https://arxiv.org/pdf/2610.22174) | [papers.cool](https://papers.cool/arxiv/2610.22174)
+- Authors: Yilong Xu, Minrui Xu, Xinyu Zhou, Xiang Long, Haochen Tan, Zhijiang Guo
+- Published: 2026-10-15 16:32 UTC | Categories: cs.AI, cs.CL, cs.LG
+- Why it matched: agentic_rl: agentic reinforcement learning, agentic rl; rl_post_training: reinforcement learning; planning_and_action: trajectory
+- Abstract skim: Most existing agentic reinforcement learning methods assume single-session trajectories, where interaction proceeds within one continuously accumulated context. However, agentic techniques such as context compaction and subagent forking may produce trajectories spanning multiple sessions, creating a mismatch between...
+
+### 45 - Constrained Multi-Agent Reinforcement Learning in Imagination
+
+- arXiv: [2610.21319](https://arxiv.org/abs/2610.21319) | [PDF](https://arxiv.org/pdf/2610.21319) | [papers.cool](https://papers.cool/arxiv/2610.21319)
+- Authors: Raz Shmueli, Shahaf S. Shperberg
+- Published: 2026-10-15 06:09 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: multi-agent; rl_post_training: reinforcement learning; planning_and_action: world model; memory_and_benchmarks: benchmark
+- Abstract skim: Predicting cost in a multi-agent world model moves most constrained policy updates into imagination: the stronger model-free baseline needs $10$ to $20$ times CA-MAMBA's interactions on the median SMAC configuration, and CA-MAMBA earns $2.8$ to $12$ times the baselines' MAMuJoCo reward at equal budget. In controlled...
+
+### 43 - Progress Reward Model for Reinforcement Learning via Large Language Models
+
+- arXiv: [2610.22056](https://arxiv.org/abs/2610.22056) | [PDF](https://arxiv.org/pdf/2610.22056) | [papers.cool](https://papers.cool/arxiv/2610.22056)
+- Authors: Xiuhui Zhang, Ning Gao, Xingyu Jiang, Yihui Chen, Yuheng Pan, Mohan Zhang, et al. (7 authors)
+- Published: 2026-10-15 15:21 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, reward model; planning_and_action: planning
+- Abstract skim: Traditional reinforcement learning (RL) algorithms face significant limitations in handling long-term tasks with sparse rewards. Recent advancements have leveraged large language models (LLMs) to enhance RL by utilizing their world knowledge for task planning and reward generation. However, planning-based approaches...
+
+### 43 - Gibbs-Gap Policy Optimization for Off-Policy RL with Verifiable Rewards
+
+- arXiv: [2610.20814](https://arxiv.org/abs/2610.20814) | [PDF](https://arxiv.org/pdf/2610.20814) | [papers.cool](https://papers.cool/arxiv/2610.20814)
+- Authors: Xuanchang Zhang, Tong Zhang
+- Published: 2026-10-14 18:59 UTC | Categories: cs.CL, cs.LG
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, grpo; reasoning: reasoning; memory_and_benchmarks: benchmark
+- Abstract skim: Reinforcement learning with verifiable rewards often trains language models on responses generated by a different, possibly stale behavior policy. Correcting this mismatch with learner-to-behavior importance weights can introduce high variance for long responses. We introduce Gibbs-Gap Policy Optimization (GGPO),...
+
+### 40 - EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search
+
+- arXiv: [2610.22290](https://arxiv.org/abs/2610.22290) | [PDF](https://arxiv.org/pdf/2610.22290) | [papers.cool](https://papers.cool/arxiv/2610.22290)
+- Authors: Hanane Nour Moussa, Doeun Lee, Sachin Kumar
+- Published: 2026-10-15 17:43 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning, grpo
+- Abstract skim: Reinforcement learning has become a common post-training technique to improve the accuracy of LLMs on verifiable tasks. However, such training can narrow the set of solutions the model can produce. Several approaches have attempted to address this behavior-sharpening effect, but they often optimize metrics that do...
+
+### 39 - GRADS: Graph-Regulated Agentic Data Synthesis with Controllable Difficulty
+
+- arXiv: [2610.21167](https://arxiv.org/abs/2610.21167) | [PDF](https://arxiv.org/pdf/2610.21167) | [papers.cool](https://papers.cool/arxiv/2610.21167)
+- Authors: Gaocheng Yang, Ruijie Tao, Kai Ye, Senhua Zhang, Zhengqin Zhu, Ziyang Li
+- Published: 2026-10-15 03:24 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use; rl_post_training: post-training, post training; reasoning: reasoning
+- Abstract skim: Deep research agents are increasingly deployed to retrieve precise information from large corpora, yet multi-hop, long-horizon tasks remain challenging. Synthetic data generation has emerged as a scalable solution, with existing pipelines typically expanding seed tasks to increase their apparent depth and breadth....
+
+### 39 - MAI-Gym: An Open All-in-One Platform for GUI Agent Evaluation and RL Training across Mobile and Computer Environments
+
+- arXiv: [2610.20939](https://arxiv.org/abs/2610.20939) | [PDF](https://arxiv.org/pdf/2610.20939) | [papers.cool](https://papers.cool/arxiv/2610.20939)
+- Authors: Panrong Tong, Quyu Kong, Pengxiang Li, Tianyu Xia, Hanzhang Zhou, Lei Wang, et al. (15 authors)
+- Published: 2026-10-14 21:06 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use, agent training; rl_post_training: reinforcement learning; planning_and_action: rollout; memory_and_benchmarks: evaluation
+- Abstract skim: Online reinforcement learning (RL) with verifiable rewards has driven rapid progress in mathematics, coding, and tool use, but scaling this success to GUI agents remains challenging due to the high cost of interactive environments and the scarcity of realistic training tasks. We introduce MAI-Gym, an open all-in-one...
+
+### 37 - Sim-to-Real Reinforcement Learning for Path-Safe Target Reaching in Robotic Harvesting of Hydroponic Lettuce
+
+- arXiv: [2610.22337](https://arxiv.org/abs/2610.22337) | [PDF](https://arxiv.org/pdf/2610.22337) | [papers.cool](https://papers.cool/arxiv/2610.22337)
+- Authors: Al Bashir, Partho Ghose, Yibin Wang, Robert G. Hardin, Joshua Peeples, Genhua Niu, et al. (7 authors)
+- Published: 2026-10-15 17:54 UTC | Categories: cs.RO
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, ppo; planning_and_action: trajectory; memory_and_benchmarks: benchmark
+- Abstract skim: Robotic harvesting requires precise manipulation to ensure accurate positioning of the end-effector, especially in a constraint workspace. This study introduces the Path-Safe Approach Proximal Policy Optimization (PSA-PPO), a target-conditioned local reaching framework designed for robotic harvesting of nutrient...
+
+### 37 - ReasonUni: Reasoning-Augmented Reconstruction Advances Unified Multimodal Models
+
+- arXiv: [2610.20781](https://arxiv.org/abs/2610.20781) | [PDF](https://arxiv.org/pdf/2610.20781) | [papers.cool](https://papers.cool/arxiv/2610.20781)
+- Authors: Feize Wu, Zhiyuan Yan, Yuhuan Hong, Yuwei Niu, Zongjian Li, Zheyuan Liu, et al. (13 authors)
+- Published: 2026-10-14 18:27 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning; reasoning: reasoning
+- Abstract skim: Image-to-text (I2T) understanding and text-to-image (T2I) generation are dual tasks in unified multimodal models (UMMs). Reconstructive post-training couples these tasks, but existing reconstruction-based methods remain perception-centric and provide limited supervision for reasoning about structure, intent, and...
+
+### 36 - Value as Memory: Online Value-Guided Post-training for General Robot Policies
+
+- arXiv: [2610.22368](https://arxiv.org/abs/2610.22368) | [PDF](https://arxiv.org/pdf/2610.22368) | [papers.cool](https://papers.cool/arxiv/2610.22368)
+- Authors: Wenye Yu, Yijin Chen, Kaiyi Xiong, Wenbo Han, Wendi Chen, Yang Jin, et al. (10 authors)
+- Published: 2026-10-15 17:59 UTC | Categories: cs.RO
+- Why it matched: rl_post_training: post-training, post training, reinforcement learning; memory_and_benchmarks: memory
+- Abstract skim: Real-world post-training of generalist robot policies faces two challenges: partial observability makes action selection ambiguous, while offline post-training methods delay feedback from deployment experience. We present Value as Memory (VaM), a framework that addresses these challenges through value caching and...
+
+### 36 - PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents
+
+- arXiv: [2610.22124](https://arxiv.org/abs/2610.22124) | [PDF](https://arxiv.org/pdf/2610.22124) | [papers.cool](https://papers.cool/arxiv/2610.22124)
+- Authors: Kshitij Mishra, Abhijith Sharma, Nils Lukas, Salem Lahlou
+- Published: 2026-10-15 16:01 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use; rl_post_training: grpo, dpo; memory_and_benchmarks: evaluation
+- Abstract skim: Modern agentic systems extend language models with external tools, enabling them to complete complex tasks through multi-turn interactions. As these agents are deployed in consequential settings, they are often constrained by policies governing pricing, privacy, confirmation, safety, and other requirements. However,...
+
+### 36 - Incentivizing Tool-Use Reinforcement Learning for Post-Arrival Emergency Care Prediction
+
+- arXiv: [2610.21449](https://arxiv.org/abs/2610.21449) | [PDF](https://arxiv.org/pdf/2610.21449) | [papers.cool](https://papers.cool/arxiv/2610.21449)
+- Authors: Pengfei Hu, Chenwei Wu, Qiao Jin, Jun Deng, Zhiyong Lu, Liyue Shen, et al. (7 authors)
+- Published: 2026-10-15 07:53 UTC | Categories: cs.AI
+- Why it matched: agentic_rl: tool use; rl_post_training: reinforcement learning; memory_and_benchmarks: evaluation
+- Abstract skim: Large language models (LLMs) can reason over both structured measurements and free-text records, which makes them attractive for emergency department (ED) prediction. However, most existing LLMs still fall short of conventional ML methods like trees on EHR-based prediction tasks. Our controlled analysis traces this...
+
+### 36 - Deep Reinforcement Learning for HPC Job Scheduling: A Statistical Evaluation
+
+- arXiv: [2610.21008](https://arxiv.org/abs/2610.21008) | [PDF](https://arxiv.org/pdf/2610.21008) | [papers.cool](https://papers.cool/arxiv/2610.21008)
+- Authors: Justin M. Cheney, Clement N. Nyirenda
+- Published: 2026-10-14 23:02 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: reinforcement learning, policy optimization, ppo; memory_and_benchmarks: evaluation
+- Abstract skim: Deep Reinforcement Learning (DRL) offers learned job selection for High-Performance Computing (HPC), but performance against heuristics alone does not establish value beyond action masking. Six DRL treatments are compared: Proximal Policy Optimization (PPO), Advantage Actor-Critic (A2C), and Deep Q-Network (DQN),...
+
+### 35 - Bellman-Consistent Trajectory RL for LLM Arithmetic Reasoning
+
+- arXiv: [2610.21060](https://arxiv.org/abs/2610.21060) | [PDF](https://arxiv.org/pdf/2610.21060) | [papers.cool](https://papers.cool/arxiv/2610.21060)
+- Authors: Lianfa Li
+- Published: 2026-10-15 01:05 UTC | Categories: cs.AI, cs.LG
+- Why it matched: rl_post_training: grpo, dpo; reasoning: reasoning; planning_and_action: trajectory
+- Abstract skim: To address sparse terminal rewards in LLM arithmetic reasoning, we propose a Bellman-consistent trajectory RL method. Our framework introduces Trajectory Bellman Residual Minimization (TBRM) to transform sparse rewards into dense token-level signals. We integrate a Reinforce Leave-One-Out (RLOO) group strategy to...
+
+### 34 - Hy-Memory-30B-A3B: Attributed Reinforcement Learning for Long-Term Memory Writing
+
+- arXiv: [2610.22196](https://arxiv.org/abs/2610.22196) | [PDF](https://arxiv.org/pdf/2610.22196) | [papers.cool](https://papers.cool/arxiv/2610.22196)
+- Authors: Tianxiang Fei, Jiazheng Kang, Mao Zheng, Xingyan He, Xiang Yu
+- Published: 2026-10-15 16:46 UTC | Categories: cs.CL
+- Why it matched: rl_post_training: reinforcement learning, grpo; memory_and_benchmarks: memory, long-term memory, benchmark
+- Abstract skim: External-memory systems extend language-model applications beyond a context window, but their quality depends critically on the model executing the write path: deciding what to retain, how precisely to represent it, and how new evidence should update persistent state. Existing frameworks typically place a general-...
+
+### 32 - CleanRM: Reward Modeling from Noisy Feedback with a Few Clean Feedback for RLHF
+
+- arXiv: [2610.21138](https://arxiv.org/abs/2610.21138) | [PDF](https://arxiv.org/pdf/2610.21138) | [papers.cool](https://papers.cool/arxiv/2610.21138)
+- Authors: Licheng Pan, Haocheng Yang, Yuzhou Chen, Yichen Sun, Yuan Lu, Yunfei Teng, et al. (10 authors)
+- Published: 2026-10-15 02:49 UTC | Categories: cs.AI
+- Why it matched: rl_post_training: rlhf, reward model
+- Abstract skim: Feedback noise is pervasive in preference data, arising from subjective human judgments, annotation mistakes, and imperfect LLM judges. Standard reward modeling trained on such feedback yields a biased estimate of the clean risk. Although classical denoising methods are directly applicable to noisy feedback...
+
+## Tuning Notes
+
+- Edit `paper_bot/config.json` to add or remove tracked arXiv categories and keyword groups.
+- Good next filters to add: preferred labs/authors, exclude applied domains, or separate lists for theory RL vs LLM post-training.
