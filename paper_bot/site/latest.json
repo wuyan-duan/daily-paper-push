@@ -13566,25 +13566,6 @@
       "matched": {},
       "negative_matches": [],
       "reason": "No configured keywords matched."
-    },
-    {
-      "score": 0,
-      "arxiv_id": "2610.30173",
-      "title": "Neural Networks with Differentiable Belief-Function Layers",
-      "authors": [
-        "Antonin Sulc"
-      ],
-      "summary": "Yager's 1987 rule of combination $\\boxplus$ was proposed on epistemic grounds: under high conflict, mass should be redistributed to ignorance rather than renormalised onto the class simplex. We observe that backpropagation needs the same rule: Dempster's normaliser $(1{-}κ)^{-1}$, where $κ$ is the conflict mass, puts a $(1{-}κ)^{-2}$ term in the gradient that diverges exactly when evidence sources disagree, while Yager's $\\boxplus$ is bilinear and has no such term. Building on this, we construct a deep evidential pipeline in which every mass in the chain from heads to output is a valid Dempster--Shafer mass function, combined by Yager's rule. The output mass on the ignorance set, $m(Θ)$, serves as the network's ``I do not know'' signal. The network is fit to hard labels and never sees an annotator distribution, yet $m(Θ)$ orders human disagreement in two modalities, visual and linguistic. Dempster's rises too and ranks contested inputs about as well, but its normaliser divides the conflict out: Yager's vacuity is $9\\times$ larger on the most contested CIFAR-10H images, so only Yager's is readable as an amount of ignorance without recalibration. For out-of-distribution detection it is competitive with strong single-pass baselines, while the clamped Dempster variant that scores higher becomes gradient-unstable once the clamp is removed.",
-      "updated": "2026-10-18T21:15:48+00:00",
-      "categories": [
-        "cs.AI"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.30173",
-      "pdf_url": "https://arxiv.org/pdf/2610.30173",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.30173",
-      "matched": {},
-      "negative_matches": [],
-      "reason": "No configured keywords matched."
     }
   ]
 }
