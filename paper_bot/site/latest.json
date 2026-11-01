@@ -6008,31 +6008,6 @@
       "reason": "agentic_rl: multi-agent"
     },
     {
-      "score": 12,
-      "arxiv_id": "2610.37700",
-      "title": "The Coordination Tax and the Heterogeneity Dividend: Break-Even Conditions for Multi-Agent LLM Pipelines",
-      "authors": [
-        "Andreas Zettl",
-        "Diego Gosmar"
-      ],
-      "summary": "Multi-agent LLM pipelines built on interoperability protocols such as the Open Floor Protocol (OFP) or A2A are usually justified on capability grounds, with their runtime cost treated as an overhead of unknown size. Comparing such a pipeline with one model call is underspecified, because a pipeline can give each role a different model. We give a closed-form model that sets the coordination tax (decomposition overhead plus per-handoff protocol cost) against the heterogeneity dividend from routing work to a cheaper model, with a break-even threshold and a feasibility bound, $α< 1/r$, and measure every term, with OFP as the protocol under test, on 135 HumanEval and ClassEval tasks in 2430 runs of six architectures with Claude Opus 5.5 and Haiku 5.5. The protocol adds 7.2 ms per handoff, 0.11% of pipeline wall time. Decomposition does not pay on these tasks: a planner-coder-reviewer pipeline costs 3.22x as much as a single strong call, takes 3.24x as long, and solves no more tasks. Moving planner and reviewer to the cheap model cuts the pipeline's cost to 0.39x but changes pass@1 by -6.7 points, leaving it dearer, slower and less accurate than the single call, and the break-even forecast misses by -19% because the cheap roles inflate token volume. The saving lies in choosing a model per task instead: an oracle choice between the two single calls solves 94.3% of runs at half the strong call's cost per solved task.",
-      "updated": "2026-10-25T11:41:30+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.37700",
-      "pdf_url": "https://arxiv.org/pdf/2610.37700",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.37700",
-      "matched": {
-        "agentic_rl": [
-          "multi-agent"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "agentic_rl: multi-agent"
-    },
-    {
       "score": 11,
       "arxiv_id": "2610.40476",
       "title": "Training language models in simulation for psychiatric intake",
@@ -6898,36 +6873,6 @@
       },
       "negative_matches": [],
       "reason": "reasoning: reasoning; memory_and_benchmarks: evaluation"
-    },
-    {
-      "score": 10,
-      "arxiv_id": "2610.37701",
-      "title": "DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering",
-      "authors": [
-        "Yeonjun Choi",
-        "Seyeon Jeong",
-        "Jong Wook Kim",
-        "Beakcheol Jang"
-      ],
-      "summary": "Large language models with retrieval-augmented generation systematically underutilize evidence in the middle of multi-document contexts, a phenomenon known as Lost in the Middle. Existing mitigation strategies, such as document reordering and attention steering, can reduce boundary bias but remain brittle in noisy settings, where inaccurate relevance estimation and spurious documents still obscure useful evidence in central positions. We propose DuQUAD, a multi-document QA framework that mitigates positional bias through dual-view reasoning and quality-aware evidence pruning. DuQUAD combines a Local Agent guided by a Structural Fusion Score with a Global Agent that reasons over the full document set, providing both targeted evidence recovery and broad contextual understanding. The framework further filters candidate evidence using explicit quality scoring and refines it at the sentence level to reduce noise. DuQUAD consistently outperforms strong Lost-in-the-Middle mitigation baselines, including hybrid retrieval and reranking, multi-agent reasoning, and context optimization methods, improving accuracy by 3.0% on average over the strongest competing baseline and gold evidence recall by 9.4%, while substantially reducing computational cost compared to existing multi-agent frameworks.",
-      "updated": "2026-10-25T14:14:11+00:00",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2610.37701",
-      "pdf_url": "https://arxiv.org/pdf/2610.37701",
-      "papers_cool_url": "https://papers.cool/arxiv/2610.37701",
-      "matched": {
-        "agentic_rl": [
-          "multi-agent"
-        ],
-        "reasoning": [
-          "reasoning"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "agentic_rl: multi-agent; reasoning: reasoning"
     },
     {
       "score": 9,
