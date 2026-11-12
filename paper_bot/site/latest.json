@@ -2528,36 +2528,6 @@
       "reason": "rl_post_training: reinforcement learning"
     },
     {
-      "score": 16,
-      "arxiv_id": "2611.12930",
-      "title": "Topology-Aware Reinforcement Learning for CAD Decomposition toward All-Hexahedral Meshing",
-      "authors": [
-        "Jiaming Peng",
-        "Zhihao Zheng",
-        "Rui Wang",
-        "Qinglin Wang",
-        "Jing Xiao",
-        "Jie Liu",
-        "Na Lei",
-        "Xinhai Chen"
-      ],
-      "summary": "Automatic hexahedral meshing for complex CAD models has long been regarded as the \"holy grail\" of mesh generation. The fundamental challenge arises from feature misalignment, where orthogonal or interacting features coexist, making direct hexahedral meshing infeasible and requiring decomposition into simpler, meshable blocks. While existing decomposition methods, including frame-field pipelines and learning-based techniques, have reduced manual intervention, they can remain sensitive to geometric and topological complexity and may fail to produce valid decompositions for challenging feature configurations. Specifically, their action spaces are typically restricted to surface-based splitting, which often yields invalid or unmeshable decompositions. To address these limitations, we propose DecompRL, a deep reinforcement learning framework for CAD decomposition toward hexahedral meshing. We design a set of topology-aware internal-splitting actions that leverage both global topological structure and local geometric property to effectively separate misaligned features. Furthermore, we introduce geometric rewards together with meshability feedback to guide the learning process toward valid decompositions and high-quality meshes. Extensive experiments on ABC, Fusion360, NIST, and DeepCAD show that DecompRL achieves the highest success rate among the evaluated learning-based methods on three of the four benchmarks, while maintaining competitive mesh quality. The measured LMFF-to-DecompRL runtime ratio reaches up to two orders of magnitude; this compares the full LMFF procedure with DecompRL decomposition alone, excluding subsequent mesh generation. The largest SR improvement is observed on Fusion360, where DecompRL reaches a success rate of 59.6%.",
-      "updated": "2026-11-05T14:37:38+00:00",
-      "categories": [
-        "cs.LG"
-      ],
-      "arxiv_url": "https://arxiv.org/abs/2611.12930",
-      "pdf_url": "https://arxiv.org/pdf/2611.12930",
-      "papers_cool_url": "https://papers.cool/arxiv/2611.12930",
-      "matched": {
-        "rl_post_training": [
-          "reinforcement learning"
-        ]
-      },
-      "negative_matches": [],
-      "reason": "rl_post_training: reinforcement learning"
-    },
-    {
       "score": 15,
       "arxiv_id": "2611.14256",
       "title": "A Cross-Scenario Survey and Analysis of Self-Evolving Multimodal Agents",
