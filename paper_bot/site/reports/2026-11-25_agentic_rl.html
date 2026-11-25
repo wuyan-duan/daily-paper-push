@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><title>2026-11-25_agentic_rl.html</title><style>
+:root { color-scheme: light; --ink:#202124; --muted:#5f6368; --line:#dadce0; --bg:#f8fafc; --card:#fff; --accent:#0b57d0; --good:#137333; --bad:#a50e0e; }
+* { box-sizing: border-box; }
+body { margin:0; font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); }
+main { max-width:1180px; margin:0 auto; padding:24px; }
+h1,h2,h3,p { margin-top:0; }
+a { color:var(--accent); text-decoration:none; }
+.topbar { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; margin-bottom:20px; }
+.topbar h1 { font-size:28px; margin-bottom:4px; letter-spacing:0; }
+.topbar p,.muted,.meta { color:var(--muted); }
+.actions { display:flex; gap:10px; }
+button,.button { border:1px solid var(--accent); background:var(--accent); color:white; border-radius:6px; padding:8px 12px; cursor:pointer; font:inherit; }
+.button.secondary { color:var(--accent); background:white; }
+button:disabled { opacity:.6; cursor:wait; }
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px; }
+.stats div,.paper,aside { background:var(--card); border:1px solid var(--line); border-radius:8px; }
+.stats div { padding:14px; }
+.stats span { display:block; color:var(--muted); font-size:12px; }
+.stats strong { font-size:24px; }
+.layout { display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:20px; align-items:start; }
+.papers { display:grid; gap:10px; }
+.paper { display:grid; grid-template-columns:48px minmax(0,1fr); gap:14px; padding:14px; }
+.paper h3 { font-size:16px; margin-bottom:4px; letter-spacing:0; }
+.explain { color:var(--muted); background:#eef3ff; border:1px solid #d6e2ff; border-radius:8px; padding:10px 12px; margin-bottom:18px; }
+.paper .score { width:48px; min-height:44px; border-radius:6px; background:#e8f0fe; color:var(--accent); display:grid; place-items:center; align-self:start; padding:6px 4px; }
+.paper .score span { font-weight:700; font-size:16px; line-height:1; }
+.paper .score small { color:#3c6ec7; font-size:10px; line-height:1; margin-top:2px; }
+.paper p { margin-bottom:8px; }
+.paper a + a { margin-left:10px; }
+aside { padding:16px; }
+aside h2 { font-size:15px; margin:18px 0 8px; }
+aside h2:first-child { margin-top:0; }
+ul { padding-left:18px; }
+li span { color:var(--muted); display:block; overflow-wrap:anywhere; }
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th,td { border-bottom:1px solid var(--line); text-align:left; padding:6px 4px; }
+.report { white-space:pre-wrap; background:white; border:1px solid var(--line); border-radius:8px; padding:18px; overflow:auto; }
+@media (max-width: 820px) {
+  main { padding:16px; }
+  .topbar { display:block; }
+  .actions { margin-top:12px; }
+  .stats { grid-template-columns:repeat(2,1fr); }
+  .layout { grid-template-columns:1fr; }
+}
+</style></head>
+<body><main><p><a href="/">Back</a></p><pre class="report"># RL / Post-Training / Agentic RL Reading Queue - 2026-11-25
+
+Source: papers.cool Atom feeds for cs.AI, cs.CL, cs.LG, cs.RO, cs.MA.
+Window: last 7 day(s). Candidates fetched in window: 0. Minimum score: 8.
+
+## Fetch Warnings
+
+- cs.AI: Failed to fetch https://papers.cool/arxiv/cs.AI/feed: &lt;urlopen error timed out&gt;
+- cs.CL: Failed to fetch https://papers.cool/arxiv/cs.CL/feed: &lt;urlopen error timed out&gt;
+- cs.LG: Failed to fetch https://papers.cool/arxiv/cs.LG/feed: &lt;urlopen error timed out&gt;
+- cs.RO: Failed to fetch https://papers.cool/arxiv/cs.RO/feed: &lt;urlopen error timed out&gt;
+- cs.MA: Failed to fetch https://papers.cool/arxiv/cs.MA/feed: &lt;urlopen error timed out&gt;
+
+No papers passed the current threshold.
+
+Try lowering `min_score`, increasing `lookback_days`, or adding terms in `paper_bot/config.json`.
+</pre></main></body></html>
